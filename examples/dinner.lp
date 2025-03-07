@@ -25,8 +25,9 @@ action(eat(X)) :- meal(X).
 prec(eat(X), readyToEat(X,Y), true) : holds(at(Y)) :- action(eat(X)).
 
 %Poss(buyIngredients(x), s) ≡ meal(x) ∧ ¬hasIngredients(x) ∧ at(store, s)
-action(buyIngredients(X)) :- not holds(hasIngredients(X)), meal(X).
+action(buyIngredients(X)) :- meal(X).
 prec(buyIngredients(X), at(store), true) :- action(buyIngredients(X)).
+prec(buyIngredients(X), holds(hasIngredients(X)), false) :- action(buyIngredients(X)).
 
 % Poss(orderTakeout(x, y), s) ≡ meal(x) ∧ takeOutRest(y) ∧ onMenu(x, y) ∧ at(home, s)
 action(orderTakeout(X,Y)) :- meal(X), takeOutRest(Y), onMenu(X,Y).

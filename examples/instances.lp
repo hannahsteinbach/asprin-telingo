@@ -4,10 +4,8 @@
 % meal(x) ≡ x = pizza ∨ x = tacos ∨ x = fajitas ∨ x = spaghetti
 % ∨ x = sweetsourpork ∨ x = crêpes ∨ x = duck ∨ x = salad
 
-%meal(pizza). meal(tacos). meal(fajitas).meal(spaghetti).
-%meal(sweetsourpork). meal(crepes). meal(duck). meal(salad).
-
-meal(pizza). meal(spaghetti). meal(crepes).
+meal(pizza). meal(tacos). meal(fajitas).meal(spaghetti).
+meal(sweetsourpork). meal(crepes). meal(duck). meal(salad).
 
 % TYPES OF MEALS
 
