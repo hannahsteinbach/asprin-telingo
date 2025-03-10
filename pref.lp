@@ -124,59 +124,43 @@ preference(p6).
 assigned_weight(p6, 1, 0) :- eventually(p6_aux).
 assigned_weight(p6, 2, 1) :- negation(eventually(p6_aux)).
 
+preference(p7).
 assigned_weight(p7, 1, 0) :- eventually(p7_aux).
 assigned_weight(p7, 2, 1) :- negation(eventually(p7_aux)).
 
+preference(p8).
 assigned_weight(p8, 1, 0) :- always(p8_aux).
 assigned_weight(p8, 2, 1) :- negation(always(p8_aux)).
 
+preference(p9).
 assigned_weight(p9, 1, 0) :- always(p9_aux).
 assigned_weight(p9, 2, 1) :- negation(always(p9_aux)).
 
-
 preference(p10).
-preference(p11).
-preference(p12).
-
-
-% does not work with initially
 assigned_weight(p10, 1, 0) :- eventually(occurs(eat(spaghetti))).
 assigned_weight(p10, 2, 4) :- eventually(occurs(eat(pizza))).
 assigned_weight(p10, 3, 5) :-  eventually(occurs(eat(crepes))).
 assigned_weight(p10, 4, 10) :-  and(negation(eventually(occurs(eat(crepes)))),
                             and(negation(eventually(occurs(eat(spaghetti)))), negation(eventually(occurs(eat(pizza)))))).
 
+preference(p11).
 assigned_weight(p11, 1, 0) :- eventually(p6_aux).
 assigned_weight(p11, 2, 2) :- and(eventually(p5_aux), always(p4_aux)).
 assigned_weight(p11, 3, 7) :- eventually(p7_aux).
 assigned_weight(p11, 4, 9) :- and(eventually(p5_aux), negation(always(p4_aux))).
 
-% also add assigned_weight for p12
+preference(p12).
 assigned_weight(p12, 1, 0) :- and(p2_aux, initially), and(eventually(p5_aux), always(p4_aux)).
 assigned_weight(p12, 2, 10) :- and(p2_aux, initially), negation(and(eventually(p5_aux), always(p4_aux))).
 assigned_weight(p12, 3, 0) :- negation(and(p2_aux, initially)).
 
-
-
-% sum up all assigned weights for the final preference score
-%total_weight(Sum) :- Sum = #sum { W : assigned_weight(_,_, W) }.
-
-% sum up all assigned weights for the final preference score for each preference, get smallest weight of *all* preferences
-%total_weight(P, Sum) :- Sum = #sum { W : assigned_weight(P, _, W) }.
-
-%smallest_weight(W0) :- total_weight(P0, W0), total_weight(P1, W1), P1 != P0, W0 <= W1.
-
-% for 13
+preference(p13).
 assigned_weight(p13, W1) :- assigned_weight(p10, W0), assigned_weight(p11, W1), W0 <= W1.
 assigned_weight(p13, W1) :- assigned_weight(p11, W0), assigned_weight(p10, W1), W0 <= W1.
 
-% for p14
+preference(p14).
 assigned_weight(p14, W0) :- assigned_weight(p10, W0), assigned_weight(p11, W1), W0 <= W1.
 assigned_weight(p14, W0)  :- assigned_weight(p11, W0), assigned_weight(p10, W1), W0 <= W1.
 
-%#show total_weight/1.
-%#show total_weight/2.
 #show assigned_weight/3.
 #show assigned_weight/2.
-%#show smallest_weight/1.
-%#show smallest_weight_assigned/1.
