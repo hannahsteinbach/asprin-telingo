@@ -1,5 +1,5 @@
-% clingo examples/dinner.lp examples/instances.lp auxiliary.lp pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp pref.lp meta-telingo-extension.lp -c horizon=2 0
-% clingo examples/dinner.lp examples/instances.lp  0 --output=reify | clingo - meta-telingo.lp -c horizon=2 0
+% clingo dinner/dinner.lp dinner/instances.lp dinner/auxiliary.lp dinner/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp dinner/pref.lp meta-telingo-extension.lp -c horizon=2 0
+% clingo dinner/dinner.lp dinner/instances.lp  0 --output=reify | clingo - meta-telingo.lp -c horizon=2 0
 
 #optimize(p1).
 

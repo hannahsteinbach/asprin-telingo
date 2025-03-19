@@ -18,9 +18,6 @@ prec(cook(X), kitchenClean, true) :- action(cook(X)).
 % Poss(eat(x), s) ≡ meal(x) ∧ (∃y(at(y, s) ∧ readyToEat(x, y, s)))
 action(eat(X)) :- meal(X).
 
-% this does not work
-% caneat(X) :- holds(at(Y)), holds(readyToEat(X,Y)).
-% prec(eat(X), caneat(X), true)  :- action(eat(X)).
 
 prec(eat(X), readyToEat(X,Y), true) : holds(at(Y)) :- action(eat(X)).
 
