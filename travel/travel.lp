@@ -54,6 +54,11 @@ prec(take_car(X, Y), at(X), true) :- action(take_car(X,Y)).
 action(buy_ticket(X,Y)) :- airport(X), airport(Y), X != Y.
 prec(buy_ticket(X, Y), has_money, true) :- action(buy_ticket(X,Y)).
 
+% add this
+action(buy_coffee).
+prec(buy_coffee, has_money, true) :- action(buy_coffee).
+prec(buy_coffee, at(coffeeshop), true) :- action(buy_coffee).
+
 :- prec(A,F,true), occurs(A), not prev(holds(F)).
 
 
@@ -85,12 +90,14 @@ eff(call_taxi(X), available_taxi(X), true) :- action(call_taxi(X)).
 % rent_car(l) causes available_car(l) if has money
 eff(rent_car(X), available_car(X), true) :- action(rent_car(X)).
 
+
+% add action buy_coffee (page 567)
+eff(buy_coffee, has_coffee, true) :- action(buy_coffee).
+
 % ADD THIS?
 % take_taxi(l1, l2) causes at(l2) if at(l1), road(l1, l2)
 eff(take_car(X,Y), at(Y), true) :- action(take_car(X,Y)).
 eff(take_car(X,Y), at(X), false) :- action(take_car(X,Y)).
-
-% add this
 eff(flight(X,Y), has_ticket(X,Y), false) :- action(flight(X,Y)).
 eff(take_taxi(X,Y), available_taxi(X), false) :- action(take_taxi(X,Y)).
 eff(take_car(X,Y), available_car(X), false) :- action(take_car(X,Y)).
@@ -114,14 +121,14 @@ wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 % GOAL
 :- finally, not holds(at(school)).
 
-
 #external initially.
 #external finally.
-%#external holds(has_money).
+#external holds(has_coffee).
 #external prev(holds(F)) : prec(A,F,true).
 #external wnext(neg(F)) : prec(A,F,true).
 %#external at(X) : location(X).
 #external wnext(neg(F)) : prec(A,F,true).
+#external eventually(holds(has_coffee)).
 
 
 #show show(occurs(X)) : action(X).
