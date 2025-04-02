@@ -39,7 +39,7 @@ action(cleanDishes).
 prec(cleanDishes, at(home), true) :- action(cleanDishes).
 
 :- prec(A,F,true), occurs(A), not prev(holds(F)).
-
+:- prec(A,F,false), occurs(A), prev(holds(F)).
 
 % EFFECTS
 

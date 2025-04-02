@@ -42,6 +42,8 @@
     W :: assigned_weight(safety, W)
 }.
 
+% combine preferences: add conjunction, disjunction, negation
+
 
 assigned_weight(P, W) :- assigned_weight(P, X, W), #false: assigned_weight(P, Y, Z), Y < X.
 

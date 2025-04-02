@@ -1,202 +1,1279 @@
-asprin version 3.1.1
+clingo version 5.4.0
 Reading from - ...
 Solving...
 Answer: 1
-(occurs(take_car(home,school)),2)
-OPTIMUM FOUND
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(2,3)),3) (occurs(push(5,2)),2) (occurs(walk(1,5)),1)
 Answer: 2
-(occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(2,3)),3) (occurs(push(5,2)),2) (occurs(walk(1,5)),1)
 Answer: 3
-(occurs(take_car(home,school)),1) (occurs(buy_ticket(airport2,airport1)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(2,3)),3) (occurs(push(5,2)),2) (occurs(walk(1,5)),1)
 Answer: 4
-(occurs(take_car(home,school)),1) (occurs(buy_ticket(airport1,airport2)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(2,3)),3) (occurs(walk(5,2)),2) (occurs(walk(1,5)),1)
 Answer: 5
-(occurs(walk(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 6
-(occurs(walk(home,school)),1) (occurs(buy_ticket(airport2,airport1)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 7
-(occurs(walk(home,school)),1) (occurs(buy_ticket(airport1,airport2)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 8
-(occurs(walk(home,school)),1) (occurs(rent_car(coffeeshop)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 9
-(occurs(walk(home,school)),1) (occurs(rent_car(bus_stop1)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 10
-(occurs(walk(home,school)),1) (occurs(rent_car(airport2)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 11
-(occurs(walk(home,school)),1) (occurs(rent_car(airport1)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 12
-(occurs(walk(home,school)),1) (occurs(rent_car(school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 13
-(occurs(walk(home,school)),1) (occurs(rent_car(home)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 14
-(occurs(walk(home,school)),1) (occurs(call_taxi(coffeeshop)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(push(3,1)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 15
-(occurs(walk(home,school)),1) (occurs(call_taxi(bus_stop1)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(push(3,2)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 16
-(occurs(walk(home,school)),1) (occurs(call_taxi(airport2)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(2,4)),5) (occurs(push(3,2)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 17
-(occurs(walk(home,school)),1) (occurs(call_taxi(airport1)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(1,4)),5) (occurs(push(3,1)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 18
-(occurs(walk(home,school)),1) (occurs(call_taxi(school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 19
-(occurs(rent_car(coffeeshop)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 20
-(occurs(rent_car(bus_stop1)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(push(3,5)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 21
-(occurs(rent_car(airport2)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 22
-(occurs(rent_car(airport1)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(push(3,5)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 23
-(occurs(rent_car(school)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 24
-(occurs(rent_car(home)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 25
-(occurs(call_taxi(coffeeshop)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 26
-(occurs(call_taxi(bus_stop1)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 27
-(occurs(call_taxi(airport2)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 28
-(occurs(call_taxi(airport1)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 29
-(occurs(call_taxi(school)),2) (occurs(take_car(home,school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 30
-(occurs(bus(coffeeshop,school)),2) (occurs(take_car(home,coffeeshop)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(1,3)),3) (occurs(walk(5,1)),2) (occurs(walk(1,5)),1)
 Answer: 31
-(occurs(walk(coffeeshop,school)),2) (occurs(take_car(home,coffeeshop)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
 Answer: 32
-(occurs(walk(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
 Answer: 33
-(occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(1,3)),2)
 Answer: 34
-(occurs(take_car(home,school)),2) (occurs(buy_ticket(airport1,airport2)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
 Answer: 35
-(occurs(take_car(home,school)),2) (occurs(buy_ticket(airport2,airport1)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
 Answer: 36
-(occurs(walk(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
 Answer: 37
-(occurs(walk(home,school)),2) (occurs(buy_ticket(airport1,airport2)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
 Answer: 38
-(occurs(walk(home,school)),2) (occurs(buy_ticket(airport2,airport1)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
 Answer: 39
-(occurs(rent_car(coffeeshop)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(1,3)),3)
 Answer: 40
-(occurs(walk(home,school)),2) (occurs(rent_car(coffeeshop)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(2,3)),3) (occurs(walk(1,2)),2)
 Answer: 41
-(occurs(rent_car(airport2)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(2,3)),3) (occurs(walk(1,2)),1)
 Answer: 42
-(occurs(walk(home,school)),2) (occurs(rent_car(airport2)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
 Answer: 43
-(occurs(rent_car(airport1)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
 Answer: 44
-(occurs(walk(home,school)),2) (occurs(rent_car(airport1)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
 Answer: 45
-(occurs(rent_car(school)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
 Answer: 46
-(occurs(walk(home,school)),2) (occurs(rent_car(school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
 Answer: 47
-(occurs(rent_car(home)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
 Answer: 48
-(occurs(walk(home,school)),2) (occurs(rent_car(home)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
 Answer: 49
-(occurs(call_taxi(coffeeshop)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
 Answer: 50
-(occurs(walk(home,school)),2) (occurs(call_taxi(coffeeshop)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
 Answer: 51
-(occurs(call_taxi(bus_stop1)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
 Answer: 52
-(occurs(walk(home,school)),2) (occurs(call_taxi(bus_stop1)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
 Answer: 53
-(occurs(walk(home,school)),2) (occurs(call_taxi(airport2)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
 Answer: 54
-(occurs(call_taxi(airport2)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
 Answer: 55
-(occurs(call_taxi(airport1)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
 Answer: 56
-(occurs(walk(home,school)),2) (occurs(call_taxi(airport1)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
 Answer: 57
-(occurs(call_taxi(school)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
 Answer: 58
-(occurs(walk(home,school)),2) (occurs(call_taxi(school)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(climb),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
 Answer: 59
-(occurs(rent_car(bus_stop1)),1) (occurs(take_car(home,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
 Answer: 60
-(occurs(walk(home,school)),2) (occurs(rent_car(bus_stop1)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
 Answer: 61
-(occurs(bus(bus_stop1,school)),2) (occurs(take_car(home,bus_stop1)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
 Answer: 62
-(occurs(walk(bus_stop1,school)),2) (occurs(take_car(home,bus_stop1)),1)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
 Answer: 63
-(occurs(walk(home,bus_stop1)),1) (occurs(bus(bus_stop1,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
 Answer: 64
-(occurs(walk(home,bus_stop1)),1) (occurs(walk(bus_stop1,school)),2)
-OPTIMUM FOUND *
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(walk(1,3)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 65
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(1,2)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 66
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 67
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(1,5)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 68
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(1,5)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 69
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 70
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 71
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 72
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(1,3)),1)
+Answer: 73
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 74
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 75
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(3,1)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 76
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 77
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 78
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 79
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 80
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 81
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 82
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 83
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 84
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 85
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 86
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 87
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(3,5)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 88
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(5,1)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 89
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(push(5,1)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 90
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(5,2)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 91
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(push(5,2)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 92
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(2,4)),5) (occurs(push(5,2)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 93
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 94
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 95
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(1,4)),5) (occurs(push(5,1)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 96
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(push(5,3)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 97
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(walk(5,3)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 98
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(push(5,3)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 99
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 100
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(2,1)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 101
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(2,5)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 102
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 103
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 104
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(2,5)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 105
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(walk(2,3)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 106
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(2,3)),3) (occurs(walk(3,2)),2) (occurs(walk(1,3)),1)
+Answer: 107
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(climb),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 108
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(1,4)),5) (occurs(walk(4,1)),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 109
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(2,4)),5) (occurs(walk(4,2)),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 110
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(walk(4,3)),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 111
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(walk(4,3)),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 112
+(occurs(take_chocolate),7) (occurs(walk(2,4)),6) (occurs(walk(4,2)),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 113
+(occurs(take_chocolate),7) (occurs(walk(1,4)),6) (occurs(walk(4,1)),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 114
+(occurs(take_chocolate),7) (occurs(walk(5,4)),6) (occurs(walk(4,5)),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 115
+(occurs(take_chocolate),7) (occurs(push(5,4)),6) (occurs(walk(4,5)),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 116
+(occurs(take_chocolate),7) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 117
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 118
+(occurs(take_chocolate),7) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 119
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(5,4)),5) (occurs(walk(4,5)),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 120
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(5,4)),5) (occurs(walk(4,5)),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 121
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(2,3)),3) (occurs(walk(4,2)),2) (occurs(walk(1,4)),1)
+Answer: 122
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(1,3)),3) (occurs(walk(3,1)),2) (occurs(walk(1,3)),1)
+Answer: 123
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(1,3)),3) (occurs(walk(2,1)),2) (occurs(walk(1,2)),1)
+Answer: 124
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 125
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 126
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 127
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 128
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 129
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 130
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 131
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(push(5,3)),4) (occurs(walk(4,5)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 132
+(occurs(take_chocolate),7) (occurs(push(3,4)),6) (occurs(take_coconut),5) (occurs(push(5,3)),4) (occurs(walk(4,5)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 133
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(1,3)),4) (occurs(walk(4,1)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 134
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(2,3)),4) (occurs(walk(4,2)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 135
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(5,3)),4) (occurs(walk(4,5)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 136
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(push(4,3)),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 137
+(occurs(take_chocolate),7) (occurs(push(3,4)),6) (occurs(take_coconut),5) (occurs(push(4,3)),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 138
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 139
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(1,3)),3) (occurs(push(5,1)),2) (occurs(walk(1,5)),1)
+Answer: 140
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(1,3)),3) (occurs(walk(4,1)),2) (occurs(walk(1,4)),1)
+Answer: 141
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(1,3)),3) (occurs(push(5,1)),2) (occurs(walk(1,5)),1)
+Answer: 142
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(1,3)),3) (occurs(push(5,1)),2) (occurs(walk(1,5)),1)
+Answer: 143
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(5,3)),3) (occurs(walk(3,5)),2) (occurs(walk(1,3)),1)
+Answer: 144
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(5,3)),3) (occurs(walk(2,5)),2) (occurs(walk(1,2)),1)
+Answer: 145
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(5,3)),3) (occurs(walk(1,5)),2)
+Answer: 146
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(5,3)),3) (occurs(walk(1,5)),1)
+Answer: 147
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(5,3)),3) (occurs(walk(4,5)),2) (occurs(walk(1,4)),1)
+Answer: 148
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 149
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(walk(1,4)),1)
+Answer: 150
+(occurs(take_chocolate),7) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 151
+(occurs(take_chocolate),7) (occurs(walk(1,4)),6) (occurs(walk(3,1)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 152
+(occurs(take_chocolate),7) (occurs(walk(2,4)),6) (occurs(walk(3,2)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 153
+(occurs(take_chocolate),7) (occurs(walk(5,4)),6) (occurs(walk(3,5)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 154
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 155
+(occurs(take_chocolate),7) (occurs(push(5,4)),6) (occurs(walk(3,5)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 156
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 157
+(occurs(take_chocolate),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 158
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(walk(1,4)),2)
+Answer: 159
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 160
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 161
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 162
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(4,5)),2) (occurs(walk(1,4)),1)
+Answer: 163
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(4,5)),2) (occurs(walk(1,4)),1)
+Answer: 164
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(1,5)),2)
+Answer: 165
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(1,5)),2)
+Answer: 166
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(1,5)),1)
+Answer: 167
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(1,5)),1)
+Answer: 168
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(2,5)),2) (occurs(walk(1,2)),1)
+Answer: 169
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(2,5)),2) (occurs(walk(1,2)),1)
+Answer: 170
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(3,5)),2) (occurs(walk(1,3)),1)
+Answer: 171
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(5,3)),3) (occurs(walk(3,5)),2) (occurs(walk(1,3)),1)
+Answer: 172
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(push(4,3)),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 173
+(occurs(take_chocolate),7) (occurs(open),6) (occurs(push(3,4)),5) (occurs(take_coconut),4) (occurs(push(4,3)),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 174
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
+Answer: 175
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
+Answer: 176
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
+Answer: 177
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 178
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 179
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 180
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 181
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 182
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 183
+(occurs(take_chocolate),7) (occurs(climb),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 184
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 185
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(2,4)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 186
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(1,4)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 187
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 188
+(occurs(take_chocolate),7) (occurs(climb),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 189
+(occurs(take_chocolate),7) (occurs(open),5) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 190
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
+Answer: 191
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
+Answer: 192
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
+Answer: 193
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 194
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 195
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 196
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(1,4)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 197
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 198
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 199
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(2,4)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 200
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 201
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 202
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 203
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 204
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 205
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 206
+(occurs(take_chocolate),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 207
+(occurs(walk(3,1)),7) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 208
+(occurs(walk(3,2)),7) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 209
+(occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 210
+(occurs(walk(3,4)),7) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 211
+(occurs(walk(3,5)),7) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 212
+(occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 213
+(occurs(walk(4,5)),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 214
+(occurs(walk(4,3)),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 215
+(occurs(walk(4,2)),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 216
+(occurs(walk(4,1)),7) (occurs(walk(3,4)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 217
+(occurs(walk(2,4)),7) (occurs(walk(3,2)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 218
+(occurs(walk(2,5)),7) (occurs(walk(3,2)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 219
+(occurs(walk(3,2)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 220
+(occurs(walk(2,3)),7) (occurs(walk(3,2)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 221
+(occurs(walk(2,1)),7) (occurs(walk(3,2)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 222
+(occurs(walk(3,1)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 223
+(occurs(walk(1,5)),7) (occurs(walk(3,1)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 224
+(occurs(walk(1,3)),7) (occurs(walk(3,1)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 225
+(occurs(walk(1,2)),7) (occurs(walk(3,1)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 226
+(occurs(walk(1,4)),7) (occurs(walk(3,1)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 227
+(occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 228
+(occurs(push(5,2)),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 229
+(occurs(push(5,1)),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 230
+(occurs(push(5,3)),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 231
+(occurs(walk(5,3)),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 232
+(occurs(walk(5,2)),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 233
+(occurs(walk(5,1)),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 234
+(occurs(climb),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 235
+(occurs(push(5,4)),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 236
+(occurs(walk(5,4)),7) (occurs(walk(3,5)),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 237
+(occurs(take_coconut),7) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 238
+(occurs(take_coconut),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 239
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 240
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 241
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 242
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 243
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(take_coconut),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 244
+(occurs(take_coconut),7) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 245
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(3,1)),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 246
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(3,2)),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 247
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(3,5)),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 248
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(walk(3,4)),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 249
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(3,5)),5) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 250
+(occurs(take_coconut),6) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 251
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 252
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 253
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 254
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 255
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 256
+(occurs(take_chocolate),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 257
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 258
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 259
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 260
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(walk(3,4)),5) (occurs(take_coconut),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 261
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(walk(3,4)),4) (occurs(walk(4,3)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 262
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(walk(1,4)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 263
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(walk(2,4)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 264
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(walk(5,4)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 265
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(push(5,4)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 266
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(push(5,4)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 267
+(occurs(take_coconut),7) (occurs(push(2,3)),6) (occurs(push(5,2)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 268
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(push(5,1)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 269
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(5,1)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 270
+(occurs(take_coconut),7) (occurs(walk(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 271
+(occurs(take_coconut),7) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 272
+(occurs(take_coconut),7) (occurs(climb),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 273
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(5,2)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 274
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(push(5,2)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 275
+(occurs(grasp),7) (occurs(climb),6) (occurs(push(5,2)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 276
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 277
+(occurs(climb),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 278
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 279
+(occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 280
+(occurs(push(3,4)),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 281
+(occurs(push(3,1)),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 282
+(occurs(push(3,2)),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 283
+(occurs(push(3,5)),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 284
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 285
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 286
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(push(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 287
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 288
+(occurs(take_coconut),6) (occurs(walk(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 289
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 290
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 291
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 292
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(5,3)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 293
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 294
+(occurs(take_coconut),7) (occurs(push(1,3)),6) (occurs(push(5,1)),5) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 295
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 296
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 297
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 298
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 299
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 300
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 301
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 302
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 303
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 304
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 305
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 306
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 307
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 308
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 309
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(1,4)),1)
+Answer: 310
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 311
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 312
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 313
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 314
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 315
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 316
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 317
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 318
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(walk(1,4)),4) (occurs(walk(4,1)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 319
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(walk(2,4)),4) (occurs(walk(4,2)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 320
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(walk(5,4)),4) (occurs(walk(4,5)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 321
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(push(5,4)),4) (occurs(walk(4,5)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 322
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(push(5,4)),4) (occurs(walk(4,5)),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 323
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 324
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 325
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 326
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 327
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 328
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 329
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 330
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 331
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 332
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 333
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 334
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 335
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 336
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 337
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 338
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 339
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 340
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 341
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 342
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 343
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 344
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 345
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 346
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 347
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 348
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 349
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 350
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 351
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 352
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(1,5)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 353
+(occurs(take_coconut),7) (occurs(walk(1,3)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 354
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(1,3)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 355
+(occurs(take_coconut),6) (occurs(walk(1,3)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 356
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(1,3)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 357
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(1,3)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 358
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(1,3)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 359
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(1,3)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 360
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(1,2)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 361
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(2,5)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 362
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 363
+(occurs(take_coconut),7) (occurs(walk(2,3)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 364
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(2,1)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 365
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(2,3)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 366
+(occurs(take_coconut),6) (occurs(walk(2,3)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 367
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(2,3)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 368
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(2,3)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 369
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(2,3)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 370
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(2,3)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 371
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 372
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 373
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 374
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),1)
+Answer: 375
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(1,5)),5) (occurs(walk(4,1)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 376
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 377
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(2,5)),5) (occurs(walk(4,2)),4) (occurs(take_chocolate),3) (occurs(open),2) (occurs(walk(1,4)),1)
+Answer: 378
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(5,4)),3) (occurs(walk(4,5)),2) (occurs(walk(1,4)),1)
+Answer: 379
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 380
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 381
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 382
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 383
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 384
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 385
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 386
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 387
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 388
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 389
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(push(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 390
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(push(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 391
+(occurs(take_coconut),7) (occurs(push(2,3)),6) (occurs(push(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 392
+(occurs(take_coconut),7) (occurs(push(1,3)),6) (occurs(push(4,1)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 393
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 394
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 395
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 396
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 397
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 398
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(push(4,1)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 399
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 400
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 401
+(occurs(grasp),7) (occurs(climb),6) (occurs(push(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 402
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 403
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 404
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 405
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 406
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 407
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 408
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 409
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 410
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 411
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 412
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 413
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 414
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 415
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 416
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 417
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 418
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 419
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 420
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 421
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 422
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 423
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 424
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 425
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 426
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 427
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 428
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 429
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 430
+(occurs(take_coconut),7) (occurs(walk(2,3)),6) (occurs(walk(4,2)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 431
+(occurs(take_coconut),7) (occurs(walk(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 432
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 433
+(occurs(take_coconut),7) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 434
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 435
+(occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 436
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 437
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 438
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 439
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(walk(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 440
+(occurs(take_coconut),7) (occurs(walk(1,3)),6) (occurs(walk(4,1)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 441
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 442
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 443
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(push(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 444
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 445
+(occurs(take_coconut),7) (occurs(push(5,3)),6) (occurs(walk(4,5)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 446
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 447
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),3) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 448
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(2,4)),2) (occurs(walk(1,2)),1)
+Answer: 449
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 450
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),3) (occurs(walk(1,4)),2)
+Answer: 451
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(1,4)),2)
+Answer: 452
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 453
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 454
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 455
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(2,4)),3) (occurs(push(5,2)),2) (occurs(walk(1,5)),1)
+Answer: 456
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 457
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 458
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 459
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 460
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 461
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 462
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(2,4)),3) (occurs(push(5,2)),2) (occurs(walk(1,5)),1)
+Answer: 463
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 464
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 465
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),2) (occurs(walk(1,3)),1)
+Answer: 466
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 467
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 468
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 469
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 470
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 471
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(1,4)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 472
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(1,4)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 473
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(1,4)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 474
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(1,4)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 475
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(1,4)),4) (occurs(walk(3,1)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 476
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(2,4)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 477
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(2,4)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 478
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(2,4)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 479
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(2,4)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 480
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(2,4)),4) (occurs(walk(3,2)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 481
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 482
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 483
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 484
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 485
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 486
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 487
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 488
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
+Answer: 489
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 490
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
+Answer: 491
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 492
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 493
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
+Answer: 494
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 495
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 496
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
+Answer: 497
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 498
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),1)
+Answer: 499
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
+Answer: 500
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 501
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
+Answer: 502
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
+Answer: 503
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
+Answer: 504
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
+Answer: 505
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(1,3)),2)
+Answer: 506
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 507
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 508
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 509
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 510
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 511
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 512
+(occurs(climb),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 513
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 514
+(occurs(push(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 515
+(occurs(push(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 516
+(occurs(push(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 517
+(occurs(push(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 518
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 519
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 520
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(5,4)),4) (occurs(walk(3,5)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 521
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 522
+(occurs(climb),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 523
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 524
+(occurs(push(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 525
+(occurs(push(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 526
+(occurs(push(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 527
+(occurs(push(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 528
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 529
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 530
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(push(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 531
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 532
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 533
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 534
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 535
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 536
+(occurs(climb),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 537
+(occurs(walk(3,4)),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 538
+(occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 539
+(occurs(push(3,2)),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 540
+(occurs(push(3,1)),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 541
+(occurs(push(3,4)),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 542
+(occurs(push(3,5)),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 543
+(occurs(walk(3,2)),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 544
+(occurs(walk(3,1)),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 545
+(occurs(walk(3,5)),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 546
+(occurs(take_coconut),7) (occurs(take_coconut),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 547
+(occurs(take_coconut),7) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 548
+(occurs(take_coconut),7) (occurs(climb),6) (occurs(push(4,3)),5) (occurs(take_chocolate),4) (occurs(open),3) (occurs(push(5,4)),2) (occurs(walk(1,5)),1)
+Answer: 549
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(5,4)),3) (occurs(walk(3,5)),2) (occurs(walk(1,3)),1)
+Answer: 550
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(5,4)),3) (occurs(walk(1,5)),2)
+Answer: 551
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(5,4)),3) (occurs(walk(2,5)),2) (occurs(walk(1,2)),1)
+Answer: 552
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(5,4)),3) (occurs(walk(1,5)),1)
+Answer: 553
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(2,4)),3) (occurs(walk(4,2)),2) (occurs(walk(1,4)),1)
+Answer: 554
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(2,4)),3) (occurs(walk(3,2)),2) (occurs(walk(1,3)),1)
+Answer: 555
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(2,4)),3) (occurs(walk(1,2)),1)
+Answer: 556
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(2,4)),3) (occurs(walk(1,2)),2)
+Answer: 557
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(2,4)),3) (occurs(walk(5,2)),2) (occurs(walk(1,5)),1)
+Answer: 558
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(2,4)),3) (occurs(push(5,2)),2) (occurs(walk(1,5)),1)
+Answer: 559
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
+Answer: 560
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
+Answer: 561
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
+Answer: 562
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
+Answer: 563
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),4) (occurs(take_coconut),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
+Answer: 564
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(3,5)),2) (occurs(walk(1,3)),1)
+Answer: 565
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(3,5)),2) (occurs(walk(1,3)),1)
+Answer: 566
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(1,5)),2)
+Answer: 567
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(2,5)),2) (occurs(walk(1,2)),1)
+Answer: 568
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(2,5)),2) (occurs(walk(1,2)),1)
+Answer: 569
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(1,5)),2)
+Answer: 570
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(1,5)),1)
+Answer: 571
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(1,5)),1)
+Answer: 572
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(4,5)),2) (occurs(walk(1,4)),1)
+Answer: 573
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(5,4)),3) (occurs(walk(4,5)),2) (occurs(walk(1,4)),1)
+Answer: 574
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(1,4)),3) (occurs(walk(3,1)),2) (occurs(walk(1,3)),1)
+Answer: 575
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(1,4)),3) (occurs(walk(2,1)),2) (occurs(walk(1,2)),1)
+Answer: 576
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(1,4)),3)
+Answer: 577
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(1,4)),3) (occurs(walk(5,1)),2) (occurs(walk(1,5)),1)
+Answer: 578
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(1,4)),3) (occurs(walk(4,1)),2) (occurs(walk(1,4)),1)
+Answer: 579
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(3,4)),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 580
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(3,4)),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 581
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(1,4)),3) (occurs(push(5,1)),2) (occurs(walk(1,5)),1)
+Answer: 582
+(occurs(take_coconut),7) (occurs(push(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(push(1,4)),3) (occurs(push(5,1)),2) (occurs(walk(1,5)),1)
+Answer: 583
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(1,4)),3) (occurs(push(5,1)),2) (occurs(walk(1,5)),1)
+Answer: 584
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 585
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(walk(1,3)),1)
+Answer: 586
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(walk(2,3)),2) (occurs(walk(1,2)),1)
+Answer: 587
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(walk(1,3)),2)
+Answer: 588
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(walk(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 589
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(push(5,3)),2) (occurs(walk(1,5)),1)
+Answer: 590
+(occurs(take_coconut),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(walk(4,3)),2) (occurs(walk(1,4)),1)
+Answer: 591
+(occurs(walk(3,4)),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 592
+(occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 593
+(occurs(walk(3,2)),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 594
+(occurs(walk(3,1)),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 595
+(occurs(walk(3,5)),7) (occurs(walk(4,3)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 596
+(occurs(walk(4,1)),7) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 597
+(occurs(walk(5,1)),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 598
+(occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 599
+(occurs(walk(5,2)),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 600
+(occurs(climb),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 601
+(occurs(walk(4,2)),7) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 602
+(occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 603
+(occurs(walk(4,5)),7) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 604
+(occurs(walk(5,4)),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 605
+(occurs(push(5,2)),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 606
+(occurs(push(5,3)),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 607
+(occurs(walk(5,3)),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 608
+(occurs(walk(4,3)),7) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 609
+(occurs(walk(2,1)),7) (occurs(walk(4,2)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 610
+(occurs(walk(2,4)),7) (occurs(walk(4,2)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 611
+(occurs(walk(4,2)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 612
+(occurs(walk(2,5)),7) (occurs(walk(4,2)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 613
+(occurs(walk(2,3)),7) (occurs(walk(4,2)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 614
+(occurs(walk(1,2)),7) (occurs(walk(4,1)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 615
+(occurs(walk(1,4)),7) (occurs(walk(4,1)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 616
+(occurs(walk(4,1)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 617
+(occurs(walk(1,5)),7) (occurs(walk(4,1)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 618
+(occurs(walk(1,3)),7) (occurs(walk(4,1)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 619
+(occurs(push(5,1)),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 620
+(occurs(push(5,4)),7) (occurs(walk(4,5)),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 621
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 622
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 623
+(occurs(walk(4,1)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 624
+(occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 625
+(occurs(take_chocolate),6) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 626
+(occurs(take_chocolate),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 627
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 628
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 629
+(occurs(walk(4,2)),7) (occurs(take_chocolate),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 630
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 631
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 632
+(occurs(walk(4,5)),7) (occurs(take_chocolate),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 633
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),5) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 634
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+Answer: 635
+(occurs(walk(4,3)),7) (occurs(take_chocolate),6) (occurs(take_chocolate),5) (occurs(open),4) (occurs(walk(3,4)),3) (occurs(take_coconut),2) (occurs(walk(1,3)),1)
+SATISFIABLE
 
-Models       : 64
-  Optimum    : yes
-  Optimal    : 64
-Calls        : 4
-Time         : 0.222s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.188s
+Models       : 635
+Calls        : 1
+Time         : 0.155s (Solving: 0.05s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 0.156s
