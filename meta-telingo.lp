@@ -132,7 +132,7 @@ true(G, X) :-   formula(until(F, G)), true(until(F,G),K,X).
 true(F, Y) :-  formula(until(F, G)), true(until(F,G),K, X), K <= Y, Y < X, time(Y).
 
 true(until(F,G),K, X)  :- true(G, X), formula(until(F,G)), time(K), time(X), K <= X, true(F, Y): time(Y), K <= Y, Y < X.
-true(until(F,G),K) :- true(until(F,G),K,X), K <= X. 
+true(until(F,G),K) :- true(until(F,G),K,X), K <= X.
 
 
 % RELEASE 

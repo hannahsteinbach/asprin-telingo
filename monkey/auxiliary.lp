@@ -1,1 +1,7 @@
-always(p2_aux) :- and(until(negation(holds(hasChocolate)), holds(hasBanana)), eventually(holds(hasChocolate))).
+eventually(p1_aux) :- eventually(holds(hasBanana)).
+
+
+always(p2_aux) :-
+    eventually(holds(hasBanana)),
+    eventually(holds(hasChocolate)),
+    until(negation(holds(hasChocolate)), holds(hasBanana)).

@@ -29,23 +29,23 @@ prec(descend, onBox, true) :- action(descend).
 
 action(grasp).
 prec(grasp, onBox, true) :- action(grasp).
-prec(grasp, at(monkey, X), true) :- action(grasp), holds(at(box,X)).
-prec(grasp, at(banana, X), true) :- action(grasp), holds(at(box,X)).
+prec(grasp, at(monkey, X), true) : holds(at(box,X)) :- action(grasp).
+prec(grasp, at(banana, X), true) : holds(at(box,X)) :- action(grasp).
 
 action(open).
 prec(open, drawerOpen, false) :- action(open).
-prec(open, at(monkey,X), true) :- action(open), holds(at(drawer,X)).
+prec(open, at(monkey,X), true) : holds(at(drawer,X)) :- action(open).
 
 action(take_chocolate).
 prec(take_chocolate, drawerOpen, true) :- action(take_chocolate).
-prec(take_chocolate, at(monkey, X), true) :- action(take_chocolate), holds(at(chocolate,X)).
+prec(take_chocolate, at(monkey, X), true) : holds(at(chocolate,X)) :- action(take_chocolate).
 
 
 action(take_coconut).
-prec(take_coconut, at(monkey, X) , true) :- action(take_coconut), holds(at(coconut,X)).
+prec(take_coconut, at(monkey, X) , true) : holds(at(coconut,X)) :- action(take_coconut).
 
 :- prec(A,F,true), occurs(A), not prev(holds(F)).
-:- prec(A,F,false), occurs(A), prev(holds(F)). % add this, do i need to add for all?
+:- prec(A,F,false), occurs(A), prev(holds(F)).
 
 % ACTIONS WITH THEIR EFFECTS (EFFECTS)
 eff(walk(X,Y), at(monkey, Y), true) :- action(walk(X,Y)).
