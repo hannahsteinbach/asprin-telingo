@@ -8,6 +8,17 @@ holds(has_money) :-initially.
 % initially (available car(home))
 holds(available_car(home)) :- initially.
 
+holds(sCost(0)) :- initially.
+holds(sCost(NC)) :-
+    prev(holds(sCost(N))),
+    occurs(A),
+    cost(A, C),
+    num(N), num(C), NC = N + C, num(NC).
+
+wnext(neg(sCost(N))) :-
+    holds(sCost(N)),
+    wnext(holds(sCost(M))), N != M.
+
 
 % ACTIONS WITH THEIR EXECUTABILITY CONDITIONS (ACTION PRECONDITION AXIOMS)
 
@@ -119,19 +130,38 @@ wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 
 
 % GOAL
-:- finally, not holds(at(school)).
+holds(goal_achieved) :- holds(at(school)).
+:- not eventually(holds(goal_achieved)).
+
+% additional functionality
+wnext(occurs(stop)) :- holds(at(school)).
+holds(ended) :- occurs(stop).
+
+wnext(occurs(noop)) :- holds(ended).
+:- occurs(stop), occurs(X), action(X), X != noop.
+
 
 #external initially.
 #external finally.
+#external occurs(stop).
+#external holds(ended).
+#external eventually(holds(goal_achieved)).
+#external eventually(holds(at(school))).
 #external holds(has_coffee).
+#external prev(holds(sCost(N))) : holds(sCost(N)).
+#external wnext(holds(sCost(M))) : holds(sCost(M)).
 #external prev(holds(F)) : prec(A,F,true).
 #external wnext(neg(F)) : prec(A,F,true).
 %#external at(X) : location(X).
 #external wnext(neg(F)) : prec(A,F,true).
 #external eventually(holds(has_coffee)).
 
-
+%#show show(holds(goal_achieved)).
+%#show show(holds(ended)).
+%#show show(holds(noop)).
+%#show show(occurs(stop)).
 #show show(occurs(X)) : action(X).
+%#show show(holds(sCost(N))) : holds(sCost(N)).
 %#show show(holds(F)) : eff(A, F, true).
 %#show show(holds(at(X))) : location(X).
 %#show show(holds(has_money)).

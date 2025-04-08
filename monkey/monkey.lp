@@ -79,18 +79,32 @@ neg(F) :- occurs(A), eff(A, F, false).
 wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 
 % GOAL
-:- finally, not holds(hasChocolate).
-:- finally, not holds(hasBanana), not holds(hasCoconut).
+holds(goal_achieved) :- holds(hasCoconut), holds(hasChocolate).
+holds(goal_achieved) :- holds(hasBanana), holds(hasChocolate).
 
+:- not eventually(holds(goal_achieved)).
+
+
+% additional functionality
+wnext(occurs(stop)) :- holds(hasChocolate), holds(hasBanana).
+wnext(occurs(stop)) :- holds(hasChocolate), holds(hasCoconut).
+holds(ended) :- occurs(stop).
+
+wnext(occurs(noop)) :- holds(ended).
+:- occurs(stop), occurs(X), action(X), X != noop.
 
 #external initially.
+#external eventually(holds(goal_achieved)).
+#external eventually(occurs(noop)).
+#external eventually(holds(ended)).
+#external occurs(stop).
 #external finally.
 #external prev(holds(F)) : prec(A,F,true).
 #external wnext(neg(F)) : prec(A,F,true).
 %#external at(X) : location(X).
 #external wnext(neg(F)) : prec(A,F,true).
 
-
+%#show show(holds(goal_achieved)).
 #show show(occurs(X)) : action(X).
 %#show show(holds(at(X, Y))) : entity(X), location(Y).
 %#show show(holds(F)) : eff(A, F, true).

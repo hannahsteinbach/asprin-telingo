@@ -86,7 +86,7 @@ true(next(F),T) :- true(F,T+1), formula(next(F)), time(T), time(T+1).
 formula(F) :- formula(wnext(F)).
 true(F,T+1) :- true(wnext(F),T), formula(wnext(F)), time(T), time(T+1).
 true(wnext(F),T) :- true(F,T+1), formula(wnext(F)), time(T), time(T+1).
-true(wnext(F),horizon) :- formula(wnext(F)). 
+true(wnext(F),horizon) :- formula(wnext(F)).
 
 % eventually, T1 has to be true at least once after T0
 formula(F) :- formula(eventually(F)).

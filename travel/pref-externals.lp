@@ -31,3 +31,7 @@
 #external eventually(occurs(walk)).
 #external eventually(occurs(take_taxi)).
 #external eventually(occurs(flight)).
+
+% cost overall
+#external finally.
+#external holds(sCost(C)) : holds(sCost(C)).

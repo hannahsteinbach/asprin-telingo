@@ -1,7 +1,7 @@
 % clingo travel/travel.lp travel/instances.lp  0 --output=reify | clingo - meta-telingo.lp -c horizon=2 0 --project
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
 
-#optimize(p5).
+#optimize(cheapest).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
 #preference(p1,less(weight)){
@@ -34,7 +34,7 @@
     W :: assigned_weight(cost, W)
 }.
 
-% (comfort) comfort = always(walk <e (drive|bus) <e taxi)
+% (comfort) comfort = always(flight <e (drive|bus) <e walk)
 #preference(comfort, less(weight)) {
     W :: assigned_weight(comfort, W)
 }.
@@ -45,7 +45,26 @@
 }.
 
 
-% combine preferences: add conjunction, disjunction, negation
+%#preference(p5,lexico){1 ::**comfort; 2::**safety}.
+
+#preference(p5, less(weight)) {
+    W :: assigned_weight(p5, W)
+}.
+
+
+% does not work yet, also to do: add conjunction, disjunction, negation
+#preference(p6,lexico){1 ::**time; 2::**cost}.
+#preference(p7,pareto){ **p5; **p6}.
+
+% shortest trajectory
+#preference(shortest,less(weight)){
+    W :: time_of_goal(W)
+    }.
+
+% cheapest trajectory
+#preference(cheapest,less(weight)){
+    W :: cost_overall(W)
+    }.
 
 
 assigned_weight(P, W) :- assigned_weight(P, X, W), #false: assigned_weight(P, Y, Z), Y < X.
@@ -71,23 +90,38 @@ assigned_weight(time, 1, 0) :- eventually(occurs(take_taxi)). % only for school 
 assigned_weight(time, 2, 4) :- eventually(occurs(take_car)).
 assigned_weight(time, 2, 4) :- eventually(occurs(bus)).
 assigned_weight(time, 3, 5) :-  eventually(occurs(walk)).
+assigned_weight(time, 4, 10) :-  eventually(occurs(flight)).
 
 preference(cost).
 assigned_weight(cost, 1, 0) :- eventually(occurs(walk)).
 assigned_weight(cost, 2, 4) :- eventually(occurs(take_car)).
 assigned_weight(cost, 2, 4) :- eventually(occurs(bus)).
 assigned_weight(cost, 3, 5) :-  eventually(occurs(take_taxi)).
+assigned_weight(cost, 4, 10) :-  eventually(occurs(flight)).
 
 preference(comfort).
 assigned_weight(comfort, 1, 0) :- eventually(occurs(flight)).
 assigned_weight(comfort, 2, 4) :- eventually(occurs(take_car)).
 assigned_weight(comfort, 2, 4) :- eventually(occurs(bus)).
 assigned_weight(comfort, 3, 5) :- eventually(occurs(walk)).
+assigned_weight(comfort, 4, 10) :- eventually(occurs(take_taxi)).
 
 preference(safety).
 assigned_weight(safety, 1, 0) :- eventually(occurs(walk)).
 assigned_weight(safety, 2, 4) :- eventually(occurs(flight)).
-assigned_weight(safety, 2, 5) :- eventually(occurs(take_car)).
+assigned_weight(safety, 3, 5) :- eventually(occurs(take_car)).
 assigned_weight(safety, 3, 5) :-  eventually(occurs(bus)).
+assigned_weight(safety, 4, 10) :- eventually(occurs(take_taxi)).
 
-#show assigned_weight/3.
+
+% shortest trajectory
+goal_time(T) :- true(holds(goal_achieved), T).
+non_min_goal_time(T) :- goal_time(T), goal_time(T2), T2 < T.
+time_of_goal(T) :- goal_time(T), not non_min_goal_time(T).
+
+% cheapest trajectory
+cost_overall(C) :- true(holds(sCost(C)), horizon).
+
+%#show assigned_weight/3.
+%#show assigned_weight/2.
+#show cost_overall/1.
