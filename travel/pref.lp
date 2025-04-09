@@ -1,7 +1,7 @@
 % clingo travel/travel.lp travel/instances.lp  0 --output=reify | clingo - meta-telingo.lp -c horizon=2 0 --project
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
 
-#optimize(cheapest).
+#optimize(p7).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
 #preference(p1,less(weight)){
@@ -23,7 +23,7 @@
     W :: assigned_weight(p4, W)
 }.
 
-% (time) time = always(taxi <e (drive|bus) <e walk)
+%(time) time = always(taxi <e (drive|bus) <e walk)
 #preference(time, less(weight)) {
    W :: assigned_weight(time, W)
 }.
@@ -45,27 +45,49 @@
 }.
 
 
-%#preference(p5,lexico){1 ::**comfort; 2::**safety}.
+% Ψ1 = comfort > safety
+#preference(p5,lexico){1 ::**safety; 2::**comfort}.
 
-#preference(p5, less(weight)) {
-    W :: assigned_weight(p5, W)
-}.
-
-
-% does not work yet, also to do: add conjunction, disjunction, negation
+%  Ψ2 = cost > time.
 #preference(p6,lexico){1 ::**time; 2::**cost}.
-#preference(p7,pareto){ **p5; **p6}.
+
+% combine these four desires:
+#preference(combined, pareto){**p5; **p6}.
+
+% Ψ1 = time n cost (is this actually v?)
+#preference(p7,and){ **time; **cost}.
+% Ψ2 = time & cost.
+#preference(p8,pareto){ **time; **cost}.
+
+% TO DO: v (or n) and | more intricate, how to handle several transportation measures?
+%#preference(p10,lexico){1 ::**shortest; 2::**cheapest}.
+#preference(p11,lexico){1 ::**time; 2::**p4}.
+
 
 % shortest trajectory
 #preference(shortest,less(weight)){
     W :: time_of_goal(W)
     }.
 
+% shortest trajectory
+%#preference(shortest,less(weight)){
+%    W :: time_overall(W)
+%    }.
+
 % cheapest trajectory
 #preference(cheapest,less(weight)){
     W :: cost_overall(W)
     }.
 
+% combine coffee and cheapest, prioritize getting coffee
+#preference(p9,lexico){
+ 2::**p4; 1::**cheapest
+    }.
+
+% combine coffee and shortest, prioritize getting coffee
+#preference(p10,lexico){
+ 2::**p4; 1::**shortest
+    }.
 
 assigned_weight(P, W) :- assigned_weight(P, X, W), #false: assigned_weight(P, Y, Z), Y < X.
 
@@ -118,10 +140,14 @@ assigned_weight(safety, 4, 10) :- eventually(occurs(take_taxi)).
 goal_time(T) :- true(holds(goal_achieved), T).
 non_min_goal_time(T) :- goal_time(T), goal_time(T2), T2 < T.
 time_of_goal(T) :- goal_time(T), not non_min_goal_time(T).
+%time_overall(C) :- true(holds(sTime(C)), horizon).
+
 
 % cheapest trajectory
 cost_overall(C) :- true(holds(sCost(C)), horizon).
 
 %#show assigned_weight/3.
-%#show assigned_weight/2.
+#show assigned_weight/2.
 #show cost_overall/1.
+%#show time_overall/1.
+#show time_of_goal/1.

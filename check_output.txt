@@ -2,155 +2,270 @@ asprin version 3.1.1
 Reading from - ...
 Solving...
 Answer: 1
-cost_overall(2) (occurs(buy_coffee),2) (occurs(bus(coffeeshop,school)),3) (occurs(take_car(home,coffeeshop)),1) (occurs(bus),3) (occurs(take_car),1)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(walk),2)
 OPTIMUM FOUND
 Answer: 2
-cost_overall(2) (occurs(rent_car(coffeeshop)),1) (occurs(take_car(home,coffeeshop)),2) (occurs(take_car(coffeeshop,school)),3) (occurs(take_car),3) (occurs(take_car),2)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(call_taxi(school)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 3
-cost_overall(1) (occurs(buy_coffee),2) (occurs(walk(coffeeshop,school)),3) (occurs(take_car(home,coffeeshop)),1) (occurs(walk),3) (occurs(take_car),1)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(call_taxi(airport1)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 4
-cost_overall(0) (occurs(walk(home,school)),2) (occurs(walk),2)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(call_taxi(airport2)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 5
-cost_overall(0) (occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,school)),2) (occurs(walk),2) (occurs(walk),1)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(rent_car(home)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 6
-cost_overall(1) (occurs(walk(coffeeshop,home)),2) (occurs(bus(home,coffeeshop)),1) (occurs(take_car(home,school)),3) (occurs(walk),2) (occurs(bus),1) (occurs(take_car),3)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(rent_car(airport2)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 7
-cost_overall(1) (occurs(walk(coffeeshop,school)),3) (occurs(bus(home,coffeeshop)),1) (occurs(walk),3) (occurs(bus),1)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(rent_car(coffeeshop)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 8
-cost_overall(1) (occurs(walk(home,school)),3) (occurs(walk(coffeeshop,home)),2) (occurs(bus(home,coffeeshop)),1) (occurs(walk),3) (occurs(walk),2) (occurs(bus),1)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(rent_car(airport1)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 9
-cost_overall(1) (occurs(walk(coffeeshop,school)),3) (occurs(bus(home,coffeeshop)),2) (occurs(walk),3) (occurs(bus),2)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(rent_car(school)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 10
-cost_overall(1) (occurs(walk(home,school)),3) (occurs(bus(coffeeshop,home)),2) (occurs(take_car(home,coffeeshop)),1) (occurs(walk),3) (occurs(bus),2) (occurs(take_car),1)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(call_taxi(coffeeshop)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 11
-cost_overall(1) (occurs(walk(home,school)),3) (occurs(walk(home,coffeeshop)),1) (occurs(bus(coffeeshop,home)),2) (occurs(walk),3) (occurs(walk),1) (occurs(bus),2)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,school)),2) (occurs(walk),2) (occurs(walk),1)
 OPTIMUM FOUND *
 Answer: 12
-cost_overall(1) (occurs(walk(home,coffeeshop)),1) (occurs(bus(coffeeshop,home)),2) (occurs(take_car(home,school)),3) (occurs(walk),1) (occurs(bus),2) (occurs(take_car),3)
-OPTIMUM FOUND *
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(call_taxi(home)),1) (occurs(walk),2)
+OPTIMUM FOUND
 Answer: 13
-cost_overall(1) (occurs(walk(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),3) (occurs(walk),1) (occurs(bus),3)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,1) time_of_goal(2) cost_overall(0) (occurs(walk(home,school)),2) (occurs(call_taxi(home)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 14
-cost_overall(1) (occurs(walk(home,coffeeshop)),2) (occurs(bus(coffeeshop,school)),3) (occurs(walk),2) (occurs(bus),3)
-OPTIMUM FOUND *
-Answer: 15
-cost_overall(1) (occurs(bus(coffeeshop,school)),3) (occurs(take_car(home,coffeeshop)),1) (occurs(bus),3) (occurs(take_car),1)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(home,school)),1) (occurs(walk),2)
 OPTIMUM FOUND
+Answer: 15
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(airport2,school)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 16
-cost_overall(1) (occurs(bus(coffeeshop,school)),3) (occurs(take_car(home,coffeeshop)),2) (occurs(bus),3) (occurs(take_car),2)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(airport1,school)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 17
-cost_overall(0) (occurs(walk(home,school)),1) (occurs(walk),1)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(school,home)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 18
-cost_overall(1) (occurs(walk(coffeeshop,school)),2) (occurs(bus(home,coffeeshop)),1) (occurs(walk),2) (occurs(bus),1)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(airport2,home)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 19
-cost_overall(1) (occurs(walk(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),2) (occurs(walk),1) (occurs(bus),2)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(airport1,home)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 20
-cost_overall(0) (occurs(take_car(home,school)),1) (occurs(take_car),1)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(school,airport2)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 21
-cost_overall(3) (occurs(buy_coffee),2) (occurs(bus(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),3) (occurs(bus),3) (occurs(bus),1)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(home,airport2)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 22
-cost_overall(2) (occurs(buy_coffee),2) (occurs(walk(coffeeshop,school)),3) (occurs(bus(home,coffeeshop)),1) (occurs(walk),3) (occurs(bus),1)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(airport2,airport1)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 23
-cost_overall(2) (occurs(buy_coffee),2) (occurs(walk(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),3) (occurs(walk),1) (occurs(bus),3)
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(airport1,airport2)),1) (occurs(walk),2)
 OPTIMUM FOUND *
 Answer: 24
-cost_overall(0) (occurs(take_car(home,school)),2) (occurs(take_car),2)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(school,airport1)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 25
-cost_overall(1) (occurs(buy_coffee),2) (occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,school)),3) (occurs(walk),3) (occurs(walk),1)
-OPTIMUM FOUND
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(10) (occurs(walk(home,school)),2) (occurs(buy_ticket(home,airport1)),1) (occurs(walk),2)
+OPTIMUM FOUND *
 Answer: 26
-cost_overall(1) (occurs(bus(coffeeshop,school)),2) (occurs(take_car(home,coffeeshop)),1) (occurs(bus),2) (occurs(take_car),1)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(call_taxi(home)),1) (occurs(bus),2)
 OPTIMUM FOUND
 Answer: 27
-cost_overall(1) (occurs(bus(home,school)),1) (occurs(bus),1)
-OPTIMUM FOUND
-Answer: 28
-cost_overall(1) (occurs(bus(home,school)),1) (occurs(bus),1)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(call_taxi(home)),1) (occurs(bus),2)
 OPTIMUM FOUND *
+Answer: 28
+assigned_weight(safety,10) assigned_weight(comfort,10) assigned_weight(cost,5) assigned_weight(time,0) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,0) time_of_goal(2) cost_overall(3) (occurs(take_taxi(home,school)),2) (occurs(call_taxi(home)),1) (occurs(take_taxi),2)
+OPTIMUM FOUND
 Answer: 29
-cost_overall(1) (occurs(bus(home,school)),1) (occurs(bus),1)
+assigned_weight(safety,10) assigned_weight(comfort,10) assigned_weight(cost,5) assigned_weight(time,0) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,0) time_of_goal(2) cost_overall(3) (occurs(take_taxi(home,school)),2) (occurs(call_taxi(home)),1) (occurs(take_taxi),2)
 OPTIMUM FOUND *
 Answer: 30
-cost_overall(0) (occurs(walk(coffeeshop,school)),3) (occurs(take_car(home,coffeeshop)),1) (occurs(walk),3) (occurs(take_car),1)
-OPTIMUM FOUND
+assigned_weight(safety,10) assigned_weight(comfort,10) assigned_weight(cost,5) assigned_weight(time,0) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,0) time_of_goal(2) cost_overall(3) (occurs(take_taxi(home,school)),2) (occurs(call_taxi(home)),1) (occurs(take_taxi),2)
+OPTIMUM FOUND *
 Answer: 31
-cost_overall(0) (occurs(walk(coffeeshop,school)),3) (occurs(take_car(home,coffeeshop)),2) (occurs(walk),3) (occurs(take_car),2)
+assigned_weight(safety,10) assigned_weight(comfort,10) assigned_weight(cost,5) assigned_weight(time,0) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,0) time_of_goal(2) cost_overall(3) (occurs(take_taxi(home,school)),2) (occurs(call_taxi(home)),1) (occurs(take_taxi),2)
 OPTIMUM FOUND *
 Answer: 32
-cost_overall(0) (occurs(walk(home,school)),3) (occurs(walk(airport1,home)),2) (occurs(take_car(home,airport1)),1) (occurs(walk),3) (occurs(walk),2) (occurs(take_car),1)
-OPTIMUM FOUND *
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(call_taxi(home)),1) (occurs(take_car),2)
+OPTIMUM FOUND
 Answer: 33
-cost_overall(0) (occurs(walk(home,school)),3) (occurs(walk(coffeeshop,home)),2) (occurs(take_car(home,coffeeshop)),1) (occurs(walk),3) (occurs(walk),2) (occurs(take_car),1)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,1) assigned_weight(p2,1) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(call_taxi(home)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 34
-cost_overall(0) (occurs(walk(home,airport1)),1) (occurs(walk(airport1,home)),2) (occurs(take_car(home,school)),3) (occurs(walk),2) (occurs(walk),1) (occurs(take_car),3)
-OPTIMUM FOUND *
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(home,school)),1) (occurs(take_car),2)
+OPTIMUM FOUND
 Answer: 35
-cost_overall(0) (occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,home)),2) (occurs(take_car(home,school)),3) (occurs(walk),2) (occurs(walk),1) (occurs(take_car),3)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(airport2,airport1)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 36
-cost_overall(0) (occurs(walk(home,school)),3) (occurs(walk(home,airport1)),1) (occurs(walk(airport1,home)),2) (occurs(walk),3) (occurs(walk),2) (occurs(walk),1)
-OPTIMUM FOUND
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(home,airport1)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
 Answer: 37
-cost_overall(0) (occurs(walk(home,school)),3) (occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,home)),2) (occurs(walk),3) (occurs(walk),2) (occurs(walk),1)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(school,airport1)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 38
-cost_overall(0) (occurs(walk(home,school)),3) (occurs(walk),3)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(airport1,airport2)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 39
-cost_overall(0) (occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,school)),3) (occurs(walk),3) (occurs(walk),1)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(home,airport2)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 40
-cost_overall(0) (occurs(walk(home,coffeeshop)),2) (occurs(walk(coffeeshop,school)),3) (occurs(walk),3) (occurs(walk),2)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(school,airport2)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 41
-cost_overall(0) (occurs(walk(coffeeshop,school)),2) (occurs(take_car(home,coffeeshop)),1) (occurs(walk),2) (occurs(take_car),1)
-OPTIMUM FOUND
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(airport1,home)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
 Answer: 42
-cost_overall(0) (occurs(take_car(home,school)),3) (occurs(take_car),3)
-OPTIMUM FOUND
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(airport2,home)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
 Answer: 43
-cost_overall(1) (occurs(bus(home,school)),2) (occurs(bus),2)
-OPTIMUM FOUND
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(school,home)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
 Answer: 44
-cost_overall(1) (occurs(bus(home,school)),2) (occurs(bus),2)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(airport1,school)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 45
-cost_overall(1) (occurs(bus(home,school)),3) (occurs(bus),3)
-OPTIMUM FOUND
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(12) (occurs(take_car(home,school)),2) (occurs(buy_ticket(airport2,school)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
 Answer: 46
-cost_overall(1) (occurs(walk(home,airport1)),1) (occurs(walk(airport1,home)),2) (occurs(bus(home,school)),3) (occurs(walk),2) (occurs(walk),1) (occurs(bus),3)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(take_car),2)
 OPTIMUM FOUND
 Answer: 47
-cost_overall(1) (occurs(walk(airport1,home)),2) (occurs(bus(home,school)),3) (occurs(take_car(home,airport1)),1) (occurs(walk),2) (occurs(bus),3) (occurs(take_car),1)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(call_taxi(school)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 48
-cost_overall(1) (occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,home)),2) (occurs(bus(home,school)),3) (occurs(walk),2) (occurs(walk),1) (occurs(bus),3)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(call_taxi(airport1)),1) (occurs(take_car),2)
 OPTIMUM FOUND *
 Answer: 49
-cost_overall(1) (occurs(walk(coffeeshop,home)),2) (occurs(bus(home,school)),3) (occurs(take_car(home,coffeeshop)),1) (occurs(walk),2) (occurs(bus),3) (occurs(take_car),1)
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(call_taxi(airport2)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
+Answer: 50
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(call_taxi(coffeeshop)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
+Answer: 51
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(rent_car(home)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
+Answer: 52
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(rent_car(school)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
+Answer: 53
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(rent_car(airport1)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
+Answer: 54
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(rent_car(airport2)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
+Answer: 55
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(take_car(home,school)),2) (occurs(rent_car(coffeeshop)),1) (occurs(take_car),2)
+OPTIMUM FOUND *
+Answer: 56
+assigned_weight(safety,0) assigned_weight(comfort,4) assigned_weight(cost,0) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(walk(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),2) (occurs(walk),1) (occurs(bus),2)
+OPTIMUM FOUND
+Answer: 57
+assigned_weight(safety,0) assigned_weight(comfort,4) assigned_weight(cost,0) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(walk(coffeeshop,school)),2) (occurs(take_car(home,coffeeshop)),1) (occurs(walk),2) (occurs(take_car),1)
+OPTIMUM FOUND *
+Answer: 58
+assigned_weight(safety,0) assigned_weight(comfort,4) assigned_weight(cost,0) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(2) (occurs(walk(coffeeshop,school)),2) (occurs(bus(home,coffeeshop)),1) (occurs(walk),2) (occurs(bus),1)
+OPTIMUM FOUND *
+Answer: 59
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(home,school)),1) (occurs(bus),2)
+OPTIMUM FOUND
+Answer: 60
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(airport2,airport1)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 61
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(home,airport1)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 62
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(school,airport1)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 63
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(airport1,airport2)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 64
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(home,airport2)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 65
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(school,airport2)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 66
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(airport1,home)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 67
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(airport2,home)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 68
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(school,home)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 69
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(airport1,school)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 70
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(12) (occurs(bus(home,school)),2) (occurs(buy_ticket(airport2,school)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 71
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(bus),2)
+OPTIMUM FOUND
+Answer: 72
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(call_taxi(school)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 73
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(call_taxi(airport1)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 74
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(call_taxi(airport2)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 75
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(call_taxi(coffeeshop)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 76
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(rent_car(home)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 77
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(rent_car(school)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 78
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(rent_car(airport1)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 79
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(rent_car(airport2)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 80
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(2) cost_overall(2) (occurs(bus(home,school)),2) (occurs(rent_car(coffeeshop)),1) (occurs(bus),2)
+OPTIMUM FOUND *
+Answer: 81
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(4) (occurs(bus(coffeeshop,school)),2) (occurs(take_car(home,coffeeshop)),1) (occurs(bus),2) (occurs(take_car),1)
+OPTIMUM FOUND
+Answer: 82
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(4) (occurs(bus(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),2) (occurs(bus),2) (occurs(bus),1)
+OPTIMUM FOUND *
+Answer: 83
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(2) cost_overall(4) (occurs(take_car(home,coffeeshop)),1) (occurs(take_car(coffeeshop,school)),2) (occurs(take_car),2) (occurs(take_car),1)
+OPTIMUM FOUND *
+Answer: 84
+assigned_weight(safety,0) assigned_weight(comfort,5) assigned_weight(cost,0) assigned_weight(time,5) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(1) cost_overall(0) (occurs(walk(home,school)),1) (occurs(walk),1)
+OPTIMUM FOUND
+Answer: 85
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,1) time_of_goal(1) cost_overall(2) (occurs(take_car(home,school)),1) (occurs(take_car),1)
+OPTIMUM FOUND
+Answer: 86
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(1) cost_overall(2) (occurs(bus(home,school)),1) (occurs(bus),1)
+OPTIMUM FOUND
+Answer: 87
+assigned_weight(safety,5) assigned_weight(comfort,4) assigned_weight(cost,4) assigned_weight(time,4) assigned_weight(p4,1) assigned_weight(p3,0) assigned_weight(p2,0) assigned_weight(p1,0) time_of_goal(1) cost_overall(2) (occurs(bus(home,school)),1) (occurs(bus),1)
 OPTIMUM FOUND *
 
-Models       : 49
+Models       : 87
   Optimum    : yes
-  Optimal    : 48
-Calls        : 65
-Time         : 3.635s (Solving: 0.06s 1st Model: 0.05s Unsat: 0.00s)
-CPU Time     : 3.500s
+  Optimal    : 87
+Calls        : 46
+Time         : 6.573s (Solving: 0.01s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 6.109s

@@ -20,6 +20,25 @@ wnext(neg(sCost(N))) :-
     wnext(holds(sCost(M))), N != M.
 
 
+holds(sTime(0)) :- initially.
+holds(sTime(NC)) :-
+    prev(holds(sTime(N))),
+    occurs(A),
+    time(A, C),
+    num(N), num(C), NC = N + C, num(NC).
+
+% time also proceeds with inaction, but only before goal is achieved.
+holds(sTime(N+1)) :-
+    prev(holds(sTime(N))),
+    not occurs(A),
+    not holds(goal_achieved),
+    time(A, _), num(N).
+
+wnext(neg(sTime(N))) :-
+    holds(sTime(N)),
+    wnext(holds(sTime(M))), N != M.
+
+
 % ACTIONS WITH THEIR EXECUTABILITY CONDITIONS (ACTION PRECONDITION AXIOMS)
 
 % walk(l1, l2) causes at(l2) if at(l1), road(l1, l2)
@@ -112,6 +131,7 @@ eff(take_car(X,Y), at(X), false) :- action(take_car(X,Y)).
 eff(flight(X,Y), has_ticket(X,Y), false) :- action(flight(X,Y)).
 eff(take_taxi(X,Y), available_taxi(X), false) :- action(take_taxi(X,Y)).
 eff(take_car(X,Y), available_car(X), false) :- action(take_car(X,Y)).
+eff(take_car(X,Y), available_car(Y), true) :- action(take_car(X,Y)). % add this?
 
 
 % Update by effects
@@ -150,6 +170,8 @@ wnext(occurs(noop)) :- holds(ended).
 #external holds(has_coffee).
 #external prev(holds(sCost(N))) : holds(sCost(N)).
 #external wnext(holds(sCost(M))) : holds(sCost(M)).
+#external prev(holds(sTime(N))) : holds(sTime(N)).
+#external wnext(holds(sTime(M))) : holds(sTime(M)).
 #external prev(holds(F)) : prec(A,F,true).
 #external wnext(neg(F)) : prec(A,F,true).
 %#external at(X) : location(X).
@@ -162,6 +184,7 @@ wnext(occurs(noop)) :- holds(ended).
 %#show show(occurs(stop)).
 #show show(occurs(X)) : action(X).
 %#show show(holds(sCost(N))) : holds(sCost(N)).
+%#show show(holds(sTime(N))) : holds(sTime(N)).
 %#show show(holds(F)) : eff(A, F, true).
 %#show show(holds(at(X))) : location(X).
 %#show show(holds(has_money)).
