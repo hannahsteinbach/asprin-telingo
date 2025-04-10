@@ -1,7 +1,7 @@
 % clingo travel/travel.lp travel/instances.lp  0 --output=reify | clingo - meta-telingo.lp -c horizon=2 0 --project
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
 
-#optimize(p7).
+#optimize(negated_time).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
 #preference(p1,less(weight)){
@@ -23,48 +23,72 @@
     W :: assigned_weight(p4, W)
 }.
 
-%(time) time = always(taxi <e (drive|bus) <e walk)
+%(time) time = always(taxi <e (drive|bus) <e walk) -> p. 570
 #preference(time, less(weight)) {
    W :: assigned_weight(time, W)
 }.
 
 
-% (cost) cost = always(walk <e (drive|bus) <e taxi)
+% (cost) cost = always(walk <e (drive|bus) <e taxi) -> p. 571
 #preference(cost, less(weight)) {
     W :: assigned_weight(cost, W)
 }.
 
-% (comfort) comfort = always(flight <e (drive|bus) <e walk)
+% (comfort) comfort = always(flight <e (drive|bus) <e walk) -> p. 573
 #preference(comfort, less(weight)) {
     W :: assigned_weight(comfort, W)
 }.
 
-% (safety) safety = always(walk <e flight <e (drive | bus)).
+% (safety) safety = always(walk <e flight <e (drive | bus)). -> p. 573
 #preference(safety, less(weight)) {
     W :: assigned_weight(safety, W)
 }.
 
 
-% Ψ1 = comfort > safety
+% Ψ1 = comfort > safety -> p. 573
 #preference(p5,lexico){1 ::**safety; 2::**comfort}.
 
-%  Ψ2 = cost > time.
+%  Ψ2 = cost > time. -> p. 573
 #preference(p6,lexico){1 ::**time; 2::**cost}.
 
-% combine these four desires:
+% combine these four desires: -> p. 573
 #preference(combined, pareto){**p5; **p6}.
 
-% Ψ1 = time n cost (is this actually v?)
+% Ψ1 = time n cost (is this actually v?) -> p. 579
 #preference(p7,and){ **time; **cost}.
-% Ψ2 = time & cost.
+
+% Ψ2 = time & cost. -> p. 579
 #preference(p8,pareto){ **time; **cost}.
 
+
 % TO DO: v (or n) and | more intricate, how to handle several transportation measures?
+% Ψ3 = time u cost -> p. 580
+
+
+% Ψ4 = time | cost -> p. 580
+#preference(time_disj, less(weight)){
+    W :: assigned_weight(time_disj, W)
+    }.
+
+#preference(cost_disj, less(weight)){
+    W :: assigned_weight(cost_disj, W)
+    }.
+
+#preference(trajectory_disj,pareto){ **time_disj; **cost_disj}.
+
+% Ψ5 =! time -> p. 580
+% TO DO: negated general preferences, the slowest
+#preference(negated_time, neg){
+    **time
+    }.
+
+
+% test
 %#preference(p10,lexico){1 ::**shortest; 2::**cheapest}.
 #preference(p11,lexico){1 ::**time; 2::**p4}.
 
 
-% shortest trajectory
+% shortest trajectory -> p. 592 (two options)
 #preference(shortest,less(weight)){
     W :: time_of_goal(W)
     }.
@@ -74,7 +98,7 @@
 %    W :: time_overall(W)
 %    }.
 
-% cheapest trajectory
+% cheapest trajectory -> p. 593
 #preference(cheapest,less(weight)){
     W :: cost_overall(W)
     }.
@@ -108,11 +132,11 @@ assigned_weight(p4, 1, 0) :- eventually(p4_aux).
 assigned_weight(p4, 2, 1) :- negation(eventually(p4_aux)).
 
 preference(time).
-assigned_weight(time, 1, 0) :- eventually(occurs(take_taxi)). % only for school or overall?
+assigned_weight(time, 1, 0) :- eventually(occurs(take_taxi)).
 assigned_weight(time, 2, 4) :- eventually(occurs(take_car)).
 assigned_weight(time, 2, 4) :- eventually(occurs(bus)).
 assigned_weight(time, 3, 5) :-  eventually(occurs(walk)).
-assigned_weight(time, 4, 10) :-  eventually(occurs(flight)).
+assigned_weight(time, 4, 10) :-  eventually(occurs(flight)). % how to handle this, not part of the ranking at all
 
 preference(cost).
 assigned_weight(cost, 1, 0) :- eventually(occurs(walk)).
@@ -146,8 +170,21 @@ time_of_goal(T) :- goal_time(T), not non_min_goal_time(T).
 % cheapest trajectory
 cost_overall(C) :- true(holds(sCost(C)), horizon).
 
+
+% disjuncion general preference
+transport_mode(take_taxi; take_car; bus; walk; flight).
+transportation(A) :- eventually(occurs(A)), transport_mode(A).
+
+preference(time_disj).
+assigned_weight(time_disj, 1, 0) :- not transportation(X) : transport_mode(X), X != take_taxi.
+assigned_weight(time_disj, 2, 10) :- transportation(X), X != take_taxi.
+
+preference(cost_disj).
+assigned_weight(cost_disj, 1, 0) :- not transportation(X) : transport_mode(X), X != walk.
+assigned_weight(cost_disj, 2, 10) :- transportation(X), X != walk.
+
+
 %#show assigned_weight/3.
 #show assigned_weight/2.
 #show cost_overall/1.
-%#show time_overall/1.
 #show time_of_goal/1.
