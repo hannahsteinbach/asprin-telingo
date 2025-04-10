@@ -26,12 +26,6 @@
 #show show(occurs(take_taxi)).
 #show show(occurs(flight)).
 
-#show show(transportation(take_car)).
-#show show(transportation(bus)).
-#show show(transportation(walk)).
-#show show(transportation(take_taxi)).
-#show show(transportation(flight)).
-
 #external eventually(occurs(take_car)).
 #external eventually(occurs(bus)).
 #external eventually(occurs(walk)).

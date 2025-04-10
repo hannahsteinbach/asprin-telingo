@@ -77,7 +77,6 @@
 #preference(trajectory_disj,pareto){ **time_disj; **cost_disj}.
 
 % Ψ5 =! time -> p. 580
-% TO DO: negated general preferences, the slowest
 #preference(negated_time, neg){
     **time
     }.
