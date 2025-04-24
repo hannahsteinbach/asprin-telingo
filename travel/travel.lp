@@ -90,7 +90,7 @@ prec(buy_coffee, has_money, true) :- action(buy_coffee).
 prec(buy_coffee, at(coffeeshop), true) :- action(buy_coffee).
 
 :- prec(A,F,true), occurs(A), not prev(holds(F)).
-
+:- prec(A,F,false), occurs(A), prev(holds(F)).
 
 % ACTIONS WITH THEIR EFFECTS (EFFECTS)
 
@@ -138,8 +138,10 @@ eff(take_car(X,Y), available_car(Y), true) :- action(take_car(X,Y)). % add this?
 holds(F) :- occurs(A), eff(A, F, true).
 neg(F) :- occurs(A), eff(A, F, false).
 
-{occurs(X) : action(X)}1.
+%{occurs(X) : action(X)}1.
+{ occurs(A) : action(A), A != stop, A != noop } 1 :- not holds(ended).
 
+% INERTIA
 wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 
 % holds(F) :- occurs(A), condeffect(A, X, F, true), holds(G) : condition(A,X,G,true);
@@ -153,17 +155,21 @@ wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 holds(goal_achieved) :- holds(at(school)).
 :- not eventually(holds(goal_achieved)).
 
-% additional functionality
-wnext(occurs(stop)) :- holds(at(school)).
-holds(ended) :- occurs(stop).
+% as soon as the goal is achieved, fire stop (once)
+wnext(occurs(stop)) :- holds(goal_achieved), not holds(ended).
+prec(stop, goal_achieved, true).   % stop executable if goal
+eff(stop, ended,     true).        % stop causes ended
 
+% after ended holds, fire noop every step
 wnext(occurs(noop)) :- holds(ended).
-:- occurs(stop), occurs(X), action(X), X != noop.
+prec(noop, ended,    true).        % noop executable if ended
+eff(noop, ended,     true).        % noop causes ended
 
 
 #external initially.
 #external finally.
 #external occurs(stop).
+#external wnext(occurs(noop)).
 #external holds(ended).
 #external eventually(holds(goal_achieved)).
 #external eventually(holds(at(school))).
@@ -178,10 +184,11 @@ wnext(occurs(noop)) :- holds(ended).
 #external wnext(neg(F)) : prec(A,F,true).
 #external eventually(holds(has_coffee)).
 
-%#show show(holds(goal_achieved)).
-%#show show(holds(ended)).
-%#show show(holds(noop)).
-%#show show(occurs(stop)).
+#show show(holds(goal_achieved)).
+#show show(holds(ended)).
+#show show(occurs(noop)).
+#show show(neg(holds(ended))).
+#show show(occurs(stop)).
 #show show(occurs(X)) : action(X).
 %#show show(holds(sCost(N))) : holds(sCost(N)).
 %#show show(holds(sTime(N))) : holds(sTime(N)).

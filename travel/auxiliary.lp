@@ -26,3 +26,23 @@ occurs(take_car) :- occurs(take_car(X,Y)).
 occurs(bus) :- occurs(bus(X,Y)).
 occurs(walk) :-  occurs(walk(X,Y)).
 occurs(flight) :-  occurs(flight(X,Y)).
+
+
+% shortest, for n = 3
+always(sigma(0)) :- initially, holds(goal_achieved).
+always(sigma(1))  :- initially, not holds(goal_achieved), next(holds(goal_achieved)).
+always(sigma(2)) :- initially, not holds(goal_achieved), not next(holds(goal_achieved)),
+            next(next(holds(goal_achieved))).
+always(sigma(3)) :- initially, not holds(goal_achieved), not next(holds(goal_achieved)),
+            not next(next(holds(goal_achieved))), next(next(next(holds(goal_achieved)))).
+always(sigma(4)) :- initially, not holds(goal_achieved), not next(holds(goal_achieved)),
+            not next(next(holds(goal_achieved))), not next(next(next(holds(goal_achieved)))),
+            next(next(next(next(holds(goal_achieved))))).
+always(sigma(5)) :- initially, not holds(goal_achieved), not next(holds(goal_achieved)),
+            not next(next(holds(goal_achieved))), not next(next(next(holds(goal_achieved)))),
+            not next(next(next(next(holds(goal_achieved))))), next(next(next(next(next(holds(goal_achieved)))))).
+
+
+always(occurs(stop_noop)) :- 1{occurs(stop); occurs(noop)}.
+
+#show show(occurs(stop_noop)).

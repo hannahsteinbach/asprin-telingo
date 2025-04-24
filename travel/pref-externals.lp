@@ -35,3 +35,23 @@
 % cost overall
 #external finally.
 #external holds(sCost(C)) : holds(sCost(C)).
+
+
+% shortest n = 5
+#external holds(goal_achieved).
+#external next(holds(goal_achieved)).
+#external next(next(holds(goal_achieved))).
+#external next(next(next(holds(goal_achieved)))).
+#external next(next(next(next(holds(goal_achieved))))).
+#external next(next(next(next(next(holds(goal_achieved)))))).
+
+#external initially.
+#external sigma(0).
+#external sigma(1).
+#external sigma(2).
+#external sigma(3).
+#external sigma(4).
+#external sigma(5).
+
+% shortest unbound n
+#external occurs(stop_noop).

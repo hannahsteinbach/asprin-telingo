@@ -1,7 +1,7 @@
 % clingo travel/travel.lp travel/instances.lp  0 --output=reify | clingo - meta-telingo.lp -c horizon=2 0 --project
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
 
-#optimize(negated_time).
+#optimize(shortest_action_based).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
 #preference(p1,less(weight)){
@@ -92,10 +92,15 @@
     W :: time_of_goal(W)
     }.
 
-% shortest trajectory
-%#preference(shortest,less(weight)){
-%    W :: time_overall(W)
-%    }.
+% for n = 5 (4.4.1)  p. 592
+#preference(shortest_formula_based,less(weight)){
+    W :: always(sigma(W))
+    }.
+
+% for unbound n (4.4.2)-> how to compare directly?  p. 592
+#preference(shortest_action_based,  more(cardinality)) {
+    true(occurs(stop_noop), T) : time(T)
+}.
 
 % cheapest trajectory -> p. 593
 #preference(cheapest,less(weight)){
@@ -160,10 +165,9 @@ assigned_weight(safety, 4, 10) :- eventually(occurs(take_taxi)).
 
 
 % shortest trajectory
-goal_time(T) :- true(holds(goal_achieved), T).
-non_min_goal_time(T) :- goal_time(T), goal_time(T2), T2 < T.
-time_of_goal(T) :- goal_time(T), not non_min_goal_time(T).
-%time_overall(C) :- true(holds(sTime(C)), horizon).
+time_of_goal(I) :- true(holds(goal_achieved), I),
+                   not true(holds(goal_achieved), J) : time(J), J < I.
+
 
 
 % cheapest trajectory

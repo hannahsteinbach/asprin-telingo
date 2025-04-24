@@ -73,7 +73,7 @@ eff(take_chocolate, hasChocolate, true) :- action(take_chocolate).
 holds(F) :- occurs(A), eff(A, F, true).
 neg(F) :- occurs(A), eff(A, F, false).
 
-{occurs(X) : action(X)}1.
+{ occurs(A) : action(A), A != stop, A != noop } 1 :- not holds(ended).
 
 % Inertia
 wnext(holds(F)) :- holds(F), not wnext(neg(F)).
@@ -85,13 +85,16 @@ holds(goal_achieved) :- holds(hasBanana), holds(hasChocolate).
 :- not eventually(holds(goal_achieved)).
 
 
-% additional functionality
-wnext(occurs(stop)) :- holds(hasChocolate), holds(hasBanana).
-wnext(occurs(stop)) :- holds(hasChocolate), holds(hasCoconut).
-holds(ended) :- occurs(stop).
+% as soon as the goal is achieved, fire stop (once)
+wnext(occurs(stop)) :- holds(goal_achieved), not holds(ended).
+prec(stop, goal_achieved, true).   % stop executable if goal
+eff(stop, ended,     true).        % stop causes ended
 
+% after ended holds, fire noop every step
 wnext(occurs(noop)) :- holds(ended).
-:- occurs(stop), occurs(X), action(X), X != noop.
+prec(noop, ended,    true).        % noop executable if ended
+eff(noop, ended,     true).        % noop causes ended
+
 
 #external initially.
 #external eventually(holds(goal_achieved)).
