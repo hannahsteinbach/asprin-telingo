@@ -166,6 +166,7 @@ prec(noop, ended,    true).        % noop executable if ended
 eff(noop, ended,     true).        % noop causes ended
 
 
+
 #external initially.
 #external finally.
 #external occurs(stop).
@@ -184,11 +185,11 @@ eff(noop, ended,     true).        % noop causes ended
 #external wnext(neg(F)) : prec(A,F,true).
 #external eventually(holds(has_coffee)).
 
-#show show(holds(goal_achieved)).
-#show show(holds(ended)).
-#show show(occurs(noop)).
-#show show(neg(holds(ended))).
-#show show(occurs(stop)).
+%#show show(holds(goal_achieved)).
+%#show show(holds(ended)).
+%#show show(occurs(noop)).
+%#show show(neg(holds(ended))).
+%#show show(occurs(stop)).
 #show show(occurs(X)) : action(X).
 %#show show(holds(sCost(N))) : holds(sCost(N)).
 %#show show(holds(sTime(N))) : holds(sTime(N)).
