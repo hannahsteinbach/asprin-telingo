@@ -1,11 +1,24 @@
 asprin version 3.1.1
 Reading from - ...
-*** Info : (asprin): INTERRUPTED by signal!
-UNKNOWN
+Solving...
+Answer: 1
+assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,1,0) assigned_weight(p2,1,0) assigned_weight(p1,2,1) (occurs(bus(home,coffeeshop)),2) (occurs(bus(coffeeshop,school)),3) (occurs(bus),3) (occurs(bus),2)
+Answer: 2
+assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,1,0) assigned_weight(p2,1,0) assigned_weight(p1,2,1) (occurs(flight(home,school)),2) (occurs(buy_ticket(home,school)),1) (occurs(flight),2)
+OPTIMUM FOUND
+Answer: 3
+assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,2,1) assigned_weight(p2,2,1) assigned_weight(p1,2,1) (occurs(flight(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(home,school)),2) (occurs(flight),3)
+OPTIMUM FOUND
+Answer: 4
+assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,1,0) assigned_weight(p2,1,0) assigned_weight(p1,2,1) (occurs(flight(home,school)),3) (occurs(buy_ticket(airport1,airport2)),1) (occurs(buy_ticket(home,school)),2) (occurs(flight),3)
+OPTIMUM FOUND
+Answer: 5
+assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,1,0) assigned_weight(p2,1,0) assigned_weight(p1,2,1) (occurs(flight(home,school)),3) (occurs(call_taxi(coffeeshop)),1) (occurs(buy_ticket(home,school)),2) (occurs(flight),3)
+OPTIMUM FOUND
 
-INTERRUPTED  : 1
-Models       : 0+
-  Optimum    : no
-Calls        : 1
-Time         : 0.000s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 0.000s
+Models       : 5
+  Optimum    : yes
+  Optimal    : 4
+Calls        : 10
+Time         : 6.704s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
+CPU Time     : 6.297s

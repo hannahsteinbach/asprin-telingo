@@ -1,7 +1,7 @@
 % clingo travel/travel.lp travel/instances.lp  0 --output=reify | clingo - meta-telingo.lp -c horizon=2 0 --project
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
 
-#optimize(safety).
+#optimize(trajectory_disj).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
 #preference(p1,less(weight)){
@@ -68,30 +68,33 @@
 
 %(time) time = always(taxi <e (drive|bus) <e walk) -> p. 570
 % taxi <e (drive|bus)
-#preference(time_taxi, pareto){**taxi; **take_car_neg; **bus_neg; **flight_neg; **walk_neg}.
-% #preference(time_taxi, pareto){**taxi; **take_car_neg; **bus_neg; **flight_neg; **walk_neg}.
+time_take_taxi :- eventually(occurs(take_taxi)), not eventually(occurs(take_car)), not eventually(occurs(bus)),
+                  not eventually(occurs(walk)).
+#preference(time_taxi, more(cardinality)){time_take_taxi}.
 
-% (drive|bus)
-#preference(car_bus, less(weight)) {
-    W :: assigned_weight(car_bus, W)
-}.
-% rewrite this so i dont have to use pareto?? maybe? idk yet
 % (drive|bus) <e walk)
-#preference(time_take_car_bus, pareto){**car_bus; **walk_neg}.
+
+time_take_car_bus :- eventually(occurs(take_car)), not eventually(occurs(walk)).
+time_take_car_bus :- eventually(occurs(bus)), not eventually(occurs(walk)).
+#preference(time_take_car_bus, more(cardinality)){time_take_car_bus}.
+
 #preference(time, lexico){
-    4 :: **time_taxi;
-    3 :: **time_take_car_bus;
-    2 :: **walk;
-    1 :: **flight
- }. %exclude flight?
+    3 :: **time_taxi;
+    2 :: **time_take_car_bus;
+    1 :: **walk
+ }.
 
 
 % (cost) cost = always(walk <e (drive|bus) <e taxi) -> p. 571
 % walk <e (drive|bus)
-#preference(cost_walk, pareto){**walk; **take_car_neg; **bus_neg}.
+cost_walk :- eventually(occurs(walk)), not eventually(occurs(take_car)), not eventually(occurs(bus)),
+                  not eventually(occurs(take_taxi)).
+#preference(cost_walk, more(cardinality)){cost_walk}.
 
 % (drive|bus) <e taxi
-#preference(cost_take_car_bus, pareto){**car_bus; **taxi_neg}.
+cost_take_car_bus :- eventually(occurs(take_car)), not eventually(occurs(take_taxi)).
+cost_take_car_bus :- eventually(occurs(bus)), not eventually(occurs(take_taxi)).
+#preference(cost_take_car_bus, more(cardinality)){cost_take_car_bus}.
 
 #preference(cost, lexico){
     3 :: **cost_walk;
@@ -102,10 +105,14 @@
 
 % (comfort) comfort = always(flight <e (drive|bus) <e walk) -> p. 573
 % flight <e (drive|bus)
-#preference(comfort_flight, pareto){**flight; **take_car_neg; **bus_neg}.
+comfort_flight :- eventually(occurs(flight)), not eventually(occurs(take_car)), not eventually(occurs(bus)),
+                  not eventually(occurs(walk)).
+#preference(comfort_flight, more(cardinality)){comfort_flight}.
 
-% (drive|bus) <e walk)
-#preference(comfort_take_car_bus, pareto){**car_bus; **walk_neg}.
+% (drive|bus) <e walk
+comfort_take_car_bus :- eventually(occurs(take_car)), not eventually(occurs(walk)).
+comfort_take_car_bus :- eventually(occurs(bus)), not eventually(occurs(walk)).
+#preference(comfort_take_car_bus, more(cardinality)){comfort_take_car_bus}.
 
 #preference(comfort, lexico){
     3 :: **comfort_flight;
@@ -113,21 +120,21 @@
     1 :: **walk
  }.
 
-
 % (safety) safety = always(walk <e flight <e (drive | bus)). -> p. 573
 % walk <e flight
-#preference(safety_walk, pareto){**walk; **flight_neg}.
+safety_walk :- eventually(occurs(walk)), not eventually(occurs(flight)), not eventually(occurs(take_car)),
+               not eventually(occurs(bus)).
+#preference(safety_walk, more(cardinality)){safety_walk}.
 
 % flight <e (drive | bus)
-#preference(safety_flight, pareto){**flight; **take_car_neg; **bus_neg}.
+safety_flight :- eventually(occurs(flight)), not eventually(occurs(take_car)), not eventually(occurs(bus)).
+#preference(safety_flight, more(cardinality)){safety_flight}.
+
 
 #preference(safety, lexico){
-    3 :: **safety_walk;
-    2 :: **safety_flight;
-    1 :: **car_bus
+    2 :: **safety_walk;
+    1 :: **safety_flight
  }.
-
-
 
 % Ψ1 = comfort > safety -> p. 573
 #preference(p5,lexico){1 ::**safety; 2::**comfort}.
@@ -223,54 +230,6 @@ preference(p4).
 assigned_weight(p4, 1, 0) :- eventually(p4_aux).
 assigned_weight(p4, 2, 1) :- negation(eventually(p4_aux)).
 
-preference(time).
-assigned_weight(time, 1, 0) :- eventually(occurs(take_taxi)),
-                               not eventually(occurs(take_car)),
-                               not eventually(occurs(bus)),
-                               not eventually(occurs(walk)),
-                               not eventually(occurs(flight)).
-assigned_weight(time, 2, 4) :- eventually(occurs(take_car)),
-                               not eventually(occurs(walk)),
-                               not eventually(occurs(flight)).
-assigned_weight(time, 2, 4) :- eventually(occurs(bus)),
-                               not eventually(occurs(walk)),
-                               not eventually(occurs(flight)).
-assigned_weight(time, 3, 5) :- eventually(occurs(walk)),
-                               not eventually(occurs(flight)).
-assigned_weight(time, 4, 10) :-  eventually(occurs(flight)). % how to handle this, not part of the ranking at all
-
-
-preference(cost).
-assigned_weight(cost, 1, 0) :- eventually(occurs(walk)),
-                               not eventually(occurs(take_taxi)),
-                               not eventually(occurs(take_car)),
-                               not eventually(occurs(bus)),
-                               not eventually(occurs(flight)).
-assigned_weight(cost, 2, 4) :- eventually(occurs(take_car)),
-                               not eventually(occurs(take_taxi)),
-                               not eventually(occurs(flight)).
-assigned_weight(cost, 2, 4) :- eventually(occurs(bus)),
-                               not eventually(occurs(take_taxi)),
-                               not eventually(occurs(flight)).
-assigned_weight(cost, 3, 5) :-  eventually(occurs(take_taxi)),
-                                not eventually(occurs(flight)).
-assigned_weight(cost, 4, 10) :-  eventually(occurs(flight)).
-
-preference(comfort).
-assigned_weight(comfort, 1, 0) :- eventually(occurs(flight)).
-assigned_weight(comfort, 2, 4) :- eventually(occurs(take_car)).
-assigned_weight(comfort, 2, 4) :- eventually(occurs(bus)).
-assigned_weight(comfort, 3, 5) :- eventually(occurs(walk)).
-assigned_weight(comfort, 4, 10) :- eventually(occurs(take_taxi)).
-
-preference(safety).
-assigned_weight(safety, 1, 0) :- eventually(occurs(walk)).
-assigned_weight(safety, 2, 4) :- eventually(occurs(flight)).
-assigned_weight(safety, 3, 5) :- eventually(occurs(take_car)).
-assigned_weight(safety, 3, 5) :-  eventually(occurs(bus)).
-assigned_weight(safety, 4, 10) :- eventually(occurs(take_taxi)).
-
-
 % shortest trajectory
 time_of_goal(I) :- true(holds(goal_achieved), I),
                    not true(holds(goal_achieved), J) : time(J), J < I.
@@ -302,7 +261,6 @@ preference(cost_general).
 assigned_weight(cost_general, 1, 0) :- not transportation(X) : transport_mode(X), X != walk.
 assigned_weight(cost_general, 2, 10) :- transportation(X), X != walk.
 
-not eventually(occurs(walk)).
 #show assigned_weight/3.
 %#show assigned_weight/2.
 %#show cost_overall/1.
