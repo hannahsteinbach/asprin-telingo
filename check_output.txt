@@ -2,23 +2,21 @@ asprin version 3.1.1
 Reading from - ...
 Solving...
 Answer: 1
-assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,1,0) assigned_weight(p2,1,0) assigned_weight(p1,2,1) (occurs(bus(home,coffeeshop)),2) (occurs(bus(coffeeshop,school)),3) (occurs(bus),3) (occurs(bus),2)
+(occurs(buy_coffee),2) (occurs(drive(home,coffeeshop)),1) (occurs(drive(coffeeshop,school)),3) (cost_overall(5),3) (short_aux_test,0) (short_aux_test,1) (short_aux_test,2) (short_aux_test,3) (short_aux,0) (short_aux,1) (short_aux,2) (short_aux,3) (or(time_coffee_aux,cost_coffee_aux),3) (or(time_coffee_aux,cost_coffee_aux),2) (or(time_coffee_aux,cost_coffee_aux),1) (or(time_coffee_aux,cost_coffee_aux),0) (time_v_cost_aux,0) (time_v_cost_aux,1) (time_v_cost_aux,2) (time_v_cost_aux,3) (time_coffee_aux,0) (time_coffee_aux,1) (time_coffee_aux,2) (time_coffee_aux,3) (executable(buy_coffee),2) (executable(buy_coffee),3) (executable(call_taxi),1) (executable(call_taxi),2) (executable(call_taxi),3) (executable(rent_car),1) (executable(rent_car),2) (executable(rent_car),3) (executable(buy_ticket),1) (executable(buy_ticket),2) (executable(buy_ticket),3) (executable(walk),1) (executable(walk),2) (executable(walk),3) (executable(bus),1) (executable(bus),2) (executable(bus),3) (executable(drive),1) (executable(drive),2) (executable(drive),3) (occurs(drive),3) (occurs(drive),1)
+OPTIMUM FOUND
 Answer: 2
-assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,1,0) assigned_weight(p2,1,0) assigned_weight(p1,2,1) (occurs(flight(home,school)),2) (occurs(buy_ticket(home,school)),1) (occurs(flight),2)
-OPTIMUM FOUND
+(occurs(buy_coffee),2) (occurs(bus(coffeeshop,school)),3) (occurs(drive(home,coffeeshop)),1) (cost_overall(5),3) (short_aux_test,0) (short_aux_test,1) (short_aux_test,2) (short_aux_test,3) (short_aux,0) (short_aux,1) (short_aux,2) (short_aux,3) (or(time_coffee_aux,cost_coffee_aux),3) (or(time_coffee_aux,cost_coffee_aux),2) (or(time_coffee_aux,cost_coffee_aux),1) (or(time_coffee_aux,cost_coffee_aux),0) (time_v_cost_aux,0) (time_v_cost_aux,1) (time_v_cost_aux,2) (time_v_cost_aux,3) (time_coffee_aux,0) (time_coffee_aux,1) (time_coffee_aux,2) (time_coffee_aux,3) (executable(buy_coffee),2) (executable(buy_coffee),3) (executable(call_taxi),1) (executable(call_taxi),2) (executable(call_taxi),3) (executable(rent_car),1) (executable(rent_car),2) (executable(rent_car),3) (executable(buy_ticket),1) (executable(buy_ticket),2) (executable(buy_ticket),3) (executable(walk),1) (executable(walk),2) (executable(walk),3) (executable(bus),1) (executable(bus),2) (executable(bus),3) (executable(drive),1) (executable(drive),2) (executable(drive),3) (occurs(bus),3) (occurs(drive),1)
+OPTIMUM FOUND *
 Answer: 3
-assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,2,1) assigned_weight(p2,2,1) assigned_weight(p1,2,1) (occurs(flight(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(home,school)),2) (occurs(flight),3)
-OPTIMUM FOUND
+(occurs(buy_coffee),2) (occurs(bus(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),3) (cost_overall(5),3) (short_aux_test,0) (short_aux_test,1) (short_aux_test,2) (short_aux_test,3) (short_aux,0) (short_aux,1) (short_aux,2) (short_aux,3) (or(time_coffee_aux,cost_coffee_aux),3) (or(time_coffee_aux,cost_coffee_aux),2) (or(time_coffee_aux,cost_coffee_aux),1) (or(time_coffee_aux,cost_coffee_aux),0) (time_v_cost_aux,0) (time_v_cost_aux,1) (time_v_cost_aux,2) (time_v_cost_aux,3) (time_coffee_aux,0) (time_coffee_aux,1) (time_coffee_aux,2) (time_coffee_aux,3) (executable(buy_coffee),2) (executable(buy_coffee),3) (executable(call_taxi),1) (executable(call_taxi),2) (executable(call_taxi),3) (executable(rent_car),1) (executable(rent_car),2) (executable(rent_car),3) (executable(buy_ticket),1) (executable(buy_ticket),2) (executable(buy_ticket),3) (executable(walk),1) (executable(walk),2) (executable(walk),3) (executable(bus),1) (executable(bus),2) (executable(bus),3) (executable(drive),1) (occurs(bus),1) (occurs(bus),3)
+OPTIMUM FOUND *
 Answer: 4
-assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,1,0) assigned_weight(p2,1,0) assigned_weight(p1,2,1) (occurs(flight(home,school)),3) (occurs(buy_ticket(airport1,airport2)),1) (occurs(buy_ticket(home,school)),2) (occurs(flight),3)
-OPTIMUM FOUND
-Answer: 5
-assigned_weight(cost_general,2,10) assigned_weight(time_general,2,10) assigned_weight(time_cost_conj,2,10) assigned_weight(time_cost_disj,2,10) assigned_weight(p4,2,1) assigned_weight(p3,1,0) assigned_weight(p2,1,0) assigned_weight(p1,2,1) (occurs(flight(home,school)),3) (occurs(call_taxi(coffeeshop)),1) (occurs(buy_ticket(home,school)),2) (occurs(flight),3)
+(occurs(buy_coffee),2) (occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,school)),3) (cost_overall(1),3) (short_aux_test,0) (short_aux_test,1) (short_aux_test,2) (short_aux_test,3) (short_aux,0) (short_aux,1) (short_aux,2) (short_aux,3) (or(time_coffee_aux,cost_coffee_aux),3) (or(time_coffee_aux,cost_coffee_aux),2) (or(time_coffee_aux,cost_coffee_aux),1) (or(time_coffee_aux,cost_coffee_aux),0) (time_v_cost_aux,0) (time_v_cost_aux,1) (time_v_cost_aux,2) (time_v_cost_aux,3) (cost_coffee_aux,0) (cost_coffee_aux,1) (cost_coffee_aux,2) (cost_coffee_aux,3) (executable(buy_coffee),2) (executable(buy_coffee),3) (executable(call_taxi),1) (executable(call_taxi),2) (executable(call_taxi),3) (executable(rent_car),1) (executable(rent_car),2) (executable(rent_car),3) (executable(buy_ticket),1) (executable(buy_ticket),2) (executable(buy_ticket),3) (executable(walk),1) (executable(walk),2) (executable(walk),3) (executable(bus),1) (executable(bus),2) (executable(bus),3) (executable(drive),1) (occurs(walk),3) (occurs(walk),1)
 OPTIMUM FOUND
 
-Models       : 5
+Models       : 4
   Optimum    : yes
   Optimal    : 4
-Calls        : 10
-Time         : 6.704s (Solving: 0.00s 1st Model: 0.00s Unsat: 0.00s)
-CPU Time     : 6.297s
+Calls        : 7
+Time         : 6.408s (Solving: 0.04s 1st Model: 0.03s Unsat: 0.01s)
+CPU Time     : 6.031s

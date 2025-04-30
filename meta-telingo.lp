@@ -211,9 +211,24 @@ not true(F,T):- formula(negation(F)), true(negation(F), T).
 true(negation(F), T) :- formula(negation(F)), time(T), not true(F, T).
 
 % and
-formula(F) :- formula(and(F,G)).
-formula(G) :- formula(and(F,G)).
+formula(A) :- formula(and(A,B)).
+formula(B) :- formula(and(A,B)).
+%
+true(and(A,B),K) :- true(A,K), true(B,K), time(K), formula(and(A,B)).
+true(A,K)            :- true(and(A,B),K), time(K), formula(and(A,B)).
+true(B,K)            :- true(and(A,B),K), time(K), formula(and(A,B)).
 
-true(G, T), true(F, T):- formula(and(F,G)), true(and(F,G), T).
-true(and(F,G), T) :- formula(and(F,G)), true(G, T), true(F,  T).
+% or
+formula(A) :- formula(or(A,B)).
+formula(B) :- formula(or(A,B)).
+%
+true(or(A,B),K)             :- true(A,K), time(K), formula(or(A,B)).
+true(or(A,B),K)             :- true(B,K), time(K), formula(or(A,B)).
+true(A,K) | true(B,K) :- true(or(A,B),K), time(K), formula(or(A,B)).
 
+% if
+formula(A) :- formula(if(A,B)).
+formula(B) :- formula(if(A,B)).
+%
+true(if(A,B),K) :- true(B,K) : true(A,K); time(K), formula(if(A,B)).
+true(B,K)  :- true(A,K), true(if(A,B),K), time(K), formula(if(A,B)).

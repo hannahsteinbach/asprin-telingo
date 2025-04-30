@@ -1,140 +1,48 @@
 % clingo travel/travel.lp travel/instances.lp  0 --output=reify | clingo - meta-telingo.lp -c horizon=2 0 --project
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
+#const maxCost=100.
 
-#optimize(trajectory_disj).
+#optimize(time_or_cost_test).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
-#preference(p1,less(weight)){
-    W :: assigned_weight(p1, W)
+#preference(p1,more(cardinality)){
+    and(initially, eventually(or(occurs(bus(home,school)), occurs(take_taxi(home,school)))))
 }.
 
 % (P2) always(¬occ(call_taxi(home))) -> p. 566.
-#preference(p2,less(weight)){
-    W :: assigned_weight(p2, W)
+#preference(p2,more(cardinality)){
+    and(initially, always(negation(occurs(call_taxi(home)))))
 }.
 
 % (P3) always(¬available_taxi(home)) -> p. 566.
-#preference(p3,less(weight)){
-    W :: assigned_weight(p3, W)
+#preference(p3,more(cardinality)){
+    and(initially, always(negation(holds(available_taxi(home)))))
 }.
 
 % (P4) goal(has_coffee). -> p. 569
-#preference(p4,less(weight)){
-    W :: assigned_weight(p4, W)
+#preference(p4,more(cardinality)){
+    eventually(p4_aux)
 }.
-
-% Transportation preferences
-#preference(taxi, more(cardinality)) {
-    eventually(occurs(take_taxi))
-}.
-
-#preference(take_car, more(cardinality)) {
-    eventually(occurs(take_car))
-}.
-
-#preference(bus, more(cardinality)) {
-    eventually(occurs(bus))
-}.
-
-#preference(walk, more(cardinality)) {
-    eventually(occurs(walk))
-}.
-
-#preference(flight, more(cardinality)) {
-    eventually(occurs(flight))
-}.
-
-% Negated transportation preferences
-#preference(taxi_neg, less(cardinality)) {
-    eventually(occurs(take_taxi))
-}.
-
-#preference(take_car_neg, less(cardinality)) {
-    eventually(occurs(take_car))
-}.
-
-#preference(bus_neg, less(cardinality)) {
-    eventually(occurs(bus))
-}.
-
-#preference(walk_neg, less(cardinality)) {
-    eventually(occurs(walk))
-}.
-
-#preference(flight_neg, less(cardinality)) {
-    eventually(occurs(flight))
-}.
-
 
 %(time) time = always(taxi <e (drive|bus) <e walk) -> p. 570
-% taxi <e (drive|bus)
-time_take_taxi :- eventually(occurs(take_taxi)), not eventually(occurs(take_car)), not eventually(occurs(bus)),
-                  not eventually(occurs(walk)).
-#preference(time_taxi, more(cardinality)){time_take_taxi}.
-
-% (drive|bus) <e walk)
-
-time_take_car_bus :- eventually(occurs(take_car)), not eventually(occurs(walk)).
-time_take_car_bus :- eventually(occurs(bus)), not eventually(occurs(walk)).
-#preference(time_take_car_bus, more(cardinality)){time_take_car_bus}.
-
-#preference(time, lexico){
-    3 :: **time_taxi;
-    2 :: **time_take_car_bus;
-    1 :: **walk
- }.
-
+#preference(time, more(cardinality)){
+    and(initially, always(time_aux))
+}.
 
 % (cost) cost = always(walk <e (drive|bus) <e taxi) -> p. 571
-% walk <e (drive|bus)
-cost_walk :- eventually(occurs(walk)), not eventually(occurs(take_car)), not eventually(occurs(bus)),
-                  not eventually(occurs(take_taxi)).
-#preference(cost_walk, more(cardinality)){cost_walk}.
-
-% (drive|bus) <e taxi
-cost_take_car_bus :- eventually(occurs(take_car)), not eventually(occurs(take_taxi)).
-cost_take_car_bus :- eventually(occurs(bus)), not eventually(occurs(take_taxi)).
-#preference(cost_take_car_bus, more(cardinality)){cost_take_car_bus}.
-
-#preference(cost, lexico){
-    3 :: **cost_walk;
-    2 :: **cost_take_car_bus;
-    1 :: **taxi
- }.
-
+#preference(cost, more(cardinality)){
+    and(initially, always(cost_aux))
+}.
 
 % (comfort) comfort = always(flight <e (drive|bus) <e walk) -> p. 573
-% flight <e (drive|bus)
-comfort_flight :- eventually(occurs(flight)), not eventually(occurs(take_car)), not eventually(occurs(bus)),
-                  not eventually(occurs(walk)).
-#preference(comfort_flight, more(cardinality)){comfort_flight}.
-
-% (drive|bus) <e walk
-comfort_take_car_bus :- eventually(occurs(take_car)), not eventually(occurs(walk)).
-comfort_take_car_bus :- eventually(occurs(bus)), not eventually(occurs(walk)).
-#preference(comfort_take_car_bus, more(cardinality)){comfort_take_car_bus}.
-
-#preference(comfort, lexico){
-    3 :: **comfort_flight;
-    2 :: **comfort_take_car_bus;
-    1 :: **walk
- }.
+#preference(comfort, more(cardinality)){
+    and(initially, always(comfort_aux))
+}.
 
 % (safety) safety = always(walk <e flight <e (drive | bus)). -> p. 573
-% walk <e flight
-safety_walk :- eventually(occurs(walk)), not eventually(occurs(flight)), not eventually(occurs(take_car)),
-               not eventually(occurs(bus)).
-#preference(safety_walk, more(cardinality)){safety_walk}.
-
-% flight <e (drive | bus)
-safety_flight :- eventually(occurs(flight)), not eventually(occurs(take_car)), not eventually(occurs(bus)).
-#preference(safety_flight, more(cardinality)){safety_flight}.
-
-
-#preference(safety, lexico){
-    2 :: **safety_walk;
-    1 :: **safety_flight
- }.
+#preference(safety, more(cardinality)){
+    and(initially, always(safety_aux))
+}.
 
 % Ψ1 = comfort > safety -> p. 573
 #preference(p5,lexico){1 ::**safety; 2::**comfort}.
@@ -145,31 +53,37 @@ safety_flight :- eventually(occurs(flight)), not eventually(occurs(take_car)), n
 % combine these four desires: -> p. 573
 #preference(combined, pareto){**p5; **p6}.
 
+
+% add coffee as a goal in travel.lp! (different action theory)
+% (time_coffee) time_coffee = always(occ(buy_coffee) | (take_taxi <e (drive | bus) <e walk)) -> p. 579
+#preference(time_coffee, more(cardinality)){
+    and(initially, always(time_coffee_aux))
+}.
+
+% add coffee as a goal in travel.lp! (different action theory)
+% (cost_coffee) cost_coffee = always(occ(buy_coffee) | (walk <e (drive | bus) <e tak_taxi)). -> p. 579
+#preference(cost_coffee, more(cardinality)){
+    and(initially, always(cost_coffee_aux))
+}.
+
 % Ψ1 = time n cost  -> p. 579
-#preference(time_cost_conj, less(weight)){
-    W :: assigned_weight(time_cost_conj, W)
+#preference(time_n_cost, more(cardinality)){
+    and(initially, always(time_n_cost_aux))
     }.
 
 % Ψ2 = time & cost. -> p. 579
-#preference(trajectory_conj,and){ **time_general; **cost_general}.
+#preference(time_and_cost_test,more(cardinality)){and(time_coffee_aux,cost_coffee_aux)}.
+#preference(time_and_cost,and){ **time_coffee; **cost_coffee}.
 
-
-% TO DO: v (or n) and | more intricate, how to handle several transportation measures?
 % Ψ3 = time u cost -> p. 580, must have either taxi or walk (or both)
-#preference(time_cost_disj, less(weight)){
-    W :: assigned_weight(time_cost_disj, W)
+#preference(time_v_cost, more(cardinality)){
+    and(initially, always(time_v_cost_aux))
     }.
 
 % Ψ4 = time | cost -> p. 580
-#preference(time_general, less(weight)){
-    W :: assigned_weight(time_general, W)
-    }.
+#preference(time_or_cost_test,more(cardinality)){or(time_coffee_aux,cost_coffee_aux)}.
+#preference(time_or_cost,pareto){ **time_coffee; **cost_coffee}.
 
-#preference(cost_general, less(weight)){
-    W :: assigned_weight(cost_general, W)
-    }.
-
-#preference(trajectory_disj,pareto){ **time_general; **cost_general}.
 
 % Ψ5 =! time -> p. 580
 #preference(negated_time, neg){
@@ -188,19 +102,29 @@ safety_flight :- eventually(occurs(flight)), not eventually(occurs(take_car)), n
     }.
 
 % for n = 5 (4.4.1)  p. 592
-#preference(shortest_formula_based,less(weight)){
-    W :: always(sigma(W))
+#preference(t(W), more(cardinality)){
+    and(initially,sigma(W))} : W = 0..5.
+
+#preference(shortest_formula_based,lexico){
+    -W :: **t(W) : W = 0..5
     }.
 
-% for unbound n (4.4.2)-> how to compare directly?  p. 592
+% for unbound n (4.4.2)-> how to compare directly? idk p. 592
 #preference(shortest_action_based,  more(cardinality)) {
     true(occurs(stop_noop), T) : time(T)
 }.
 
 % cheapest trajectory -> p. 593
-#preference(cheapest,less(weight)){
-    W :: cost_overall(W)
+#preference(c(W), more(cardinality)){
+    eventually(cost_overall(W))}: W = 0..maxCost.
+
+#preference(cheapest,lexico){
+    -W :: **c(W) : W = 0..maxCost
     }.
+
+%#preference(cheapest,less(weight)){
+%    W :: cost_overall(W)
+%    }.
 
 % combine coffee and cheapest, prioritize getting coffee
 #preference(comb,lexico){
@@ -236,9 +160,6 @@ time_of_goal(I) :- true(holds(goal_achieved), I),
 
 
 
-% cheapest trajectory
-cost_overall(C) :- true(holds(sCost(C)), horizon).
-
 % basic desires
 preference(time_cost_disj).
 assigned_weight(time_cost_disj, 1, 0) :- not transportation(X) : transport_mode(X), X != take_taxi, X != walk.
@@ -250,7 +171,7 @@ assigned_weight(time_cost_conj, 2, 10) :- transportation(X), X != take_taxi.
 
 
 % general preferences
-transport_mode(take_taxi; take_car; bus; walk; flight).
+transport_mode(take_taxi; drive; bus; walk; flight).
 transportation(A) :- eventually(occurs(A)), transport_mode(A).
 
 preference(time_general).
@@ -261,7 +182,6 @@ preference(cost_general).
 assigned_weight(cost_general, 1, 0) :- not transportation(X) : transport_mode(X), X != walk.
 assigned_weight(cost_general, 2, 10) :- transportation(X), X != walk.
 
-#show assigned_weight/3.
+%#show assigned_weight/3.
 %#show assigned_weight/2.
-%#show cost_overall/1.
 %#show time_of_goal/1.

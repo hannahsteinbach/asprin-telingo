@@ -35,7 +35,7 @@ cost(flight(X,Y), 0) :- action(flight(X,Y)).
 cost(take_taxi(X,Y), 3) :- action(take_taxi(X,Y)).
 cost(call_taxi(X), 0) :- action(call_taxi(X)).
 cost(rent_car(X), 0) :- action(rent_car(X)).
-cost(take_car(X,Y), 2) :- action(take_car(X,Y)).
+cost(drive(X,Y), 2) :- action(drive(X,Y)).
 cost(buy_ticket(X,Y), 10) :- action(buy_ticket(X,Y)).
 cost(buy_coffee, 1) :- action(buy_coffee).
 cost(noop, 0).
@@ -47,7 +47,7 @@ num(0..maxCost).
 % Time
 time(walk(X,Y), 6) :- action(walk(X,Y)).
 time(bus(X,Y), 4) :- action(bus(X,Y)).
-time(take_car(X,Y), 4) :- action(take_car(X,Y)).
+time(drive(X,Y), 4) :- action(drive(X,Y)).
 time(flight(X,Y), 10) :- action(flight(X,Y)).
 time(take_taxi(X,Y), 2) :- action(take_taxi(X,Y)).
 time(call_taxi(X), 1) :- action(call_taxi(X)).
