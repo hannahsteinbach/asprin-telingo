@@ -7,7 +7,6 @@ holds(has_money) :-initially.
 
 % initially (available car(home))
 holds(available_car(home)) :- initially.
-%holds(available_taxi(coffeeshop)) :- initially.
 
 holds(sCost(0)) :- initially.
 holds(sCost(NC)) :-
@@ -86,7 +85,6 @@ prec(rent_car(X), has_money, true) :- action(rent_car(X)).
 wnext(executable(rent_car)) :- action(rent_car(X)), holds(has_money).
 
 % flight(l1, l2) executable if connected(l1, l2)
-prec(flight(X, Y), connected(X,Y), true) :- action(flight(X,Y)).
 wnext(executable(flight)) :- action(flight(X, Y)), holds(connected(X,Y)).
 
 % ADD THIS?
@@ -172,10 +170,10 @@ wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 
 
 % GOAL
-% holds(goal_achieved) :- finally, holds(at(school)).
+holds(goal_achieved) :- finally, holds(at(school)).
 
 % for preferences time_coffee, cost_coffee, time_n_cost, time_and_cost, time_v_cost, time_or_cost:
-holds(goal_achieved) :- finally, holds(at(school)), holds(has_coffee).
+%holds(goal_achieved) :- finally, holds(at(school)), holds(has_coffee).
 :- not eventually(holds(goal_achieved)).
 
 % as soon as the goal is achieved, fire stop (once)
@@ -192,7 +190,6 @@ prec(noop, ended,    true).        % noop executable if ended
 wnext(executable(noop)) :-  holds(ended).
 
 eff(noop, ended, true).        % noop causes ended
-
 
 
 #external initially.

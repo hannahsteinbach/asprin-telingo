@@ -2,7 +2,7 @@
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
 #const maxCost=100.
 
-#optimize(time_or_cost_test).
+#optimize(safety_own).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
 #preference(p1,more(cardinality)){
@@ -29,19 +29,42 @@
     and(initially, always(time_aux))
 }.
 
+% time WEAK
+#preference(time_weak, more(cardinality)){
+    and(initially, always(time_weak_aux))
+}.
+
+
 % (cost) cost = always(walk <e (drive|bus) <e taxi) -> p. 571
 #preference(cost, more(cardinality)){
     and(initially, always(cost_aux))
 }.
+
+% cost WEAK
+#preference(cost_weak, more(cardinality)){
+    and(initially, always(cost_weak_aux))
+}.
+
 
 % (comfort) comfort = always(flight <e (drive|bus) <e walk) -> p. 573
 #preference(comfort, more(cardinality)){
     and(initially, always(comfort_aux))
 }.
 
+% comfort WEAK
+#preference(comfort_weak, more(cardinality)){
+    and(initially, always(comfort_weak_aux))
+}.
+
+
 % (safety) safety = always(walk <e flight <e (drive | bus)). -> p. 573
 #preference(safety, more(cardinality)){
     and(initially, always(safety_aux))
+}.
+
+% safety WEAK
+#preference(safety_weak, more(cardinality)){
+    and(initially, always(safety_weak_aux))
 }.
 
 % Ψ1 = comfort > safety -> p. 573
@@ -91,16 +114,6 @@
     }.
 
 
-% test
-%#preference(p10,lexico){1 ::**shortest; 2::**cheapest}.
-#preference(p11,lexico){1 ::**time; 2::**p4}.
-
-
-% shortest trajectory -> p. 592 (two options)
-#preference(shortest,less(weight)){
-    W :: time_of_goal(W)
-    }.
-
 % for n = 5 (4.4.1)  p. 592
 #preference(t(W), more(cardinality)){
     and(initially,sigma(W))} : W = 0..5.
@@ -122,66 +135,40 @@
     -W :: **c(W) : W = 0..maxCost
     }.
 
-%#preference(cheapest,less(weight)){
-%    W :: cost_overall(W)
-%    }.
-
-% combine coffee and cheapest, prioritize getting coffee
-#preference(comb,lexico){
- 2::**p4; 1::**cheapest
+#preference(time_own,more(weight)){
+    W :: assigned_weight(time_own, W)
     }.
 
-% combine coffee and shortest, prioritize getting coffee
-#preference(p10,lexico){
- 2::**p4; 1::**shortest
+#preference(cost_own,more(weight)){
+    W :: assigned_weight(cost_own, W)
     }.
+
+#preference(comfort_own,more(weight)){
+    W :: assigned_weight(comfort_own, W)
+    }.
+
+#preference(safety_own,more(weight)){
+    W :: assigned_weight(safety_own, W)
+    }.
+
 
 assigned_weight(P, W) :- assigned_weight(P, X, W), #false: assigned_weight(P, Y, Z), Y < X.
 
-preference(p1).
-assigned_weight(p1, 1, 0) :- eventually(p1_aux).
-assigned_weight(p1, 2, 1) :- negation(eventually(p1_aux)).
+assigned_weight(time_own, 1, 10) :- always(time_1).
+assigned_weight(time_own, 2, 5) :- always(time_2).
+assigned_weight(time_own, 3, 1) :- always(time_3).
 
-preference(p2).
-assigned_weight(p2, 1, 0) :- negation(eventually(p2_aux)).
-assigned_weight(p2, 2, 1) :- eventually(p2_aux).
+assigned_weight(cost_own, 1, 10) :- always(cost_1).
+assigned_weight(cost_own, 2, 5) :- always(cost_2).
+assigned_weight(cost_own, 3, 1) :- always(cost_3).
 
-preference(p3).
-assigned_weight(p3, 1, 0) :- negation(eventually(p3_aux)).
-assigned_weight(p3, 2, 1) :- eventually(p3_aux).
+assigned_weight(comfort_own, 1, 10) :- always(comfort_1).
+assigned_weight(comfort_own, 2, 5) :- always(comfort_2).
+assigned_weight(comfort_own, 3, 1) :- always(comfort_3).
 
-preference(p4).
-assigned_weight(p4, 1, 0) :- eventually(p4_aux).
-assigned_weight(p4, 2, 1) :- negation(eventually(p4_aux)).
-
-% shortest trajectory
-time_of_goal(I) :- true(holds(goal_achieved), I),
-                   not true(holds(goal_achieved), J) : time(J), J < I.
-
-
-
-% basic desires
-preference(time_cost_disj).
-assigned_weight(time_cost_disj, 1, 0) :- not transportation(X) : transport_mode(X), X != take_taxi, X != walk.
-assigned_weight(time_cost_disj, 2, 10) :- transportation(X), X != take_taxi, X!= walk.
-
-% Ensure both actions (take_taxi and walk) are in the trajectory.
-assigned_weight(time_cost_conj, 2, 10) :- transportation(X), X != walk.
-assigned_weight(time_cost_conj, 2, 10) :- transportation(X), X != take_taxi.
-
-
-% general preferences
-transport_mode(take_taxi; drive; bus; walk; flight).
-transportation(A) :- eventually(occurs(A)), transport_mode(A).
-
-preference(time_general).
-assigned_weight(time_general, 1, 0) :- not transportation(X) : transport_mode(X), X != take_taxi.
-assigned_weight(time_general, 2, 10) :- transportation(X), X != take_taxi.
-
-preference(cost_general).
-assigned_weight(cost_general, 1, 0) :- not transportation(X) : transport_mode(X), X != walk.
-assigned_weight(cost_general, 2, 10) :- transportation(X), X != walk.
+assigned_weight(safety_own, 1, 10) :- always(safety_1).
+assigned_weight(safety_own, 2, 5) :- always(safety_2).
+assigned_weight(safety_own, 3, 1) :- always(safety_3).
 
 %#show assigned_weight/3.
 %#show assigned_weight/2.
-%#show time_of_goal/1.

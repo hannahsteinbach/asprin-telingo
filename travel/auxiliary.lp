@@ -37,7 +37,8 @@ always(occurs(stop_noop)) :- 1{occurs(stop); occurs(noop)}.
 eventually(cost_overall(C)) :- holds(sCost(C)), finally.
 #show show(cost_overall(C)) : holds(sCost(C)).
 
-%(time) time = always(taxi <e (drive|bus) <e walk) -> p. 570
+% PAPER
+% (time) time = always(taxi <e (drive|bus) <e walk) -> p. 570
 always(time_aux) :- initially, always(and(if(and(executable(take_taxi), or(executable(drive), executable(bus))),
             and(occurs(take_taxi), negation(or(occurs(drive), occurs(bus))))), if(and(or(executable(drive), executable(bus)),
             executable(walk)), and(or(occurs(drive), occurs(bus)), negation(occurs(walk)))))).
@@ -56,6 +57,69 @@ always(comfort_aux) :- initially, always(and(if(and(executable(flight), or(execu
 always(safety_aux) :- initially, always(and(if(and(executable(walk), executable(flight)),
             and(occurs(walk), negation(flight))), if(and(executable(flight), or(executable(drive), executable(bus))),
             and(occurs(flight), negation(or(occurs(drive), occurs(bus))))))).
+
+
+% WEAK
+
+% (time weak) time = always(taxi <e (drive|bus) <e walk) -> p. 570
+always(time_weak_aux) :- initially, always(and(or(occurs(take_taxi), negation(or(occurs(drive), occurs(bus)))),
+                         or(or(occurs(drive), occurs(bus)), negation(occurs(walk))))).
+
+% (cost weak) cost = always(walk <e (drive| bus) <e taxi)-> p. 571
+always(cost_weak_aux) :- initially, always(and(or(occurs(walk), negation(or(occurs(drive), occurs(bus)))),
+                         or(or(occurs(drive), occurs(bus)), negation(occurs(take_taxi))))).
+
+% (comfort weak) comfort = always(flight <e (drive ∨ bus) <e walk) -> p. 573
+always(comfort_weak_aux) :- initially, always(and(or(occurs(flight), negation(or(occurs(drive), occurs(bus)))),
+                         or(or(occurs(drive), occurs(bus)), negation(occurs(walk))))).
+
+% (safety weak) safety = always(walk <e flight <e (drive ∨ bus)) -> p. 573
+always(safety_weak_aux) :- initially, always(and(or(occurs(walk), negation(occurs(flight))),
+                         or(occurs(flight), negation(or(occurs(drive), occurs(bus)))))).
+
+% ME (what about not mentioned actions?)
+% time = always(taxi <e (drive|bus) <e walk)
+% if taxi is executable, take taxi, it not executable and drive/bus are executable, take those, if not executable, walk (never fly)
+always(time_1) :- initially, eventually(executable(take_taxi)), eventually(occurs(take_taxi)), not eventually(occurs(drive)),
+           not eventually(occurs(bus)), not eventually(occurs(walk)), not eventually(occurs(flight)).
+always(time_2) :- initially, not eventually(occurs(take_taxi)), eventually(occurs(drive)), not eventually(occurs(walk)),
+                  not eventually(occurs(flight)).
+always(time_2) :- initially, not eventually(occurs(take_taxi)), eventually(occurs(bus)), not eventually(occurs(walk)),
+                  not eventually(occurs(flight)).
+always(time_3) :- initially, not eventually(occurs(take_taxi)), not eventually(occurs(drive)),
+                  not eventually(occurs(bus)), eventually(occurs(walk)), not eventually(occurs(flight)).
+
+% cost = always(walk <e (drive ∨ bus) <e taxi)
+% if walk is executable, then walk, it not executable and drive/bus are executable, take those, if not executable, take taxi (never fly)
+always(cost_1) :- initially, eventually(executable(walk)), eventually(occurs(walk)), not eventually(occurs(drive)),
+           not eventually(occurs(bus)), not eventually(occurs(take_taxi)), not eventually(occurs(flight)).
+always(cost_2) :- initially, not eventually(occurs(walk)), eventually(occurs(drive)), not eventually(occurs(take_taxi)),
+                  not eventually(occurs(flight)).
+always(cost_2) :- initially, not eventually(occurs(walk)), eventually(occurs(bus)), not eventually(occurs(take_taxi)),
+                  not eventually(occurs(flight)).
+always(cost_3) :- initially, not eventually(occurs(walk)), not eventually(occurs(drive)),
+                  not eventually(occurs(bus)), eventually(occurs(take_taxi)), not eventually(occurs(flight)).
+
+
+% (comfort weak) comfort = always(flight <e (drive ∨ bus) <e walk) -> p. 573
+always(comfort_1) :- initially, eventually(executable(flight)), eventually(occurs(flight)), not eventually(occurs(drive)),
+           not eventually(occurs(bus)), not eventually(occurs(walk)), not eventually(occurs(take_taxi)).
+always(comfort_2) :- initially, not eventually(occurs(flight)), eventually(occurs(drive)), not eventually(occurs(walk)),
+                  not eventually(occurs(take_taxi)).
+always(comfort_2) :- initially, not eventually(occurs(flight)), eventually(occurs(bus)), not eventually(occurs(walk)),
+                  not eventually(occurs(take_taxi)).
+always(comfort_3) :- initially, not eventually(occurs(flight)), not eventually(occurs(drive)),
+                  not eventually(occurs(bus)), eventually(occurs(walk)), not eventually(occurs(take_taxi)).
+
+% (safety weak) safety = always(walk <e flight <e (drive ∨ bus)) -> p. 573
+always(safety_1) :- initially, eventually(executable(walk)), eventually(occurs(walk)), not eventually(occurs(flight)),
+           not eventually(occurs(drive)), not eventually(occurs(bus)), not eventually(occurs(take_taxi)).
+always(safety_2) :- initially, not eventually(occurs(walk)), eventually(occurs(flight)), not eventually(occurs(drive)),
+                  not eventually(occurs(bus)), not eventually(occurs(take_taxi)).
+always(safety_3) :- initially, not eventually(occurs(walk)),  not eventually(occurs(flight)),
+                    eventually(occurs(bus)), not eventually(occurs(take_taxi)).
+always(safety_3) :- initially, not eventually(occurs(walk)),  not eventually(occurs(flight)),
+                    eventually(occurs(drive)), not eventually(occurs(take_taxi)).
 
 
 % (time_coffee) time_coffee = always(occ(buy coffee) ∨ (take taxi <e (drive ∨ bus) <e walk)) -> p. 579

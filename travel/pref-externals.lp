@@ -26,19 +26,19 @@
 #show show(occurs(stop)).
 #show show(occurs(noop)).
 
-#show show(executable(drive)).
-#show show(executable(bus)).
-#show show(executable(walk)).
-#show show(executable(take_taxi)).
+%#show show(executable(drive)).
+%#show show(executable(bus)).
+%#show show(executable(walk)).
+%#show show(executable(take_taxi)).
 #show show(executable(flight)).
-#show show(executable(buy_ticket)).
-#show show(executable(rent_car)).
-#show show(executable(call_taxi)).
-#show show(executable(buy_coffee)).
-#show show(executable(stop)).
-#show show(executable(noop)).
-#show show(executable(wait)).
-#show show(executable(do_f)).
+%#show show(executable(buy_ticket)).
+%#show show(executable(rent_car)).
+%#show show(executable(call_taxi)).
+%#show show(executable(buy_coffee)).
+%#show show(executable(stop)).
+%#show show(executable(noop)).
+%#show show(executable(wait)).
+%#show show(executable(do_f)).
 
 #external eventually(occurs(drive)).
 #external eventually(occurs(bus)).
@@ -101,6 +101,13 @@
 
 #external and(initially, always(time_aux)).
 
+
+% weak time
+#external always(and(or(occurs(take_taxi), negation(or(occurs(drive), occurs(bus)))),
+                         or(or(occurs(drive), occurs(bus)), negation(occurs(walk))))).
+
+#external and(initially, always(time_weak_aux)).
+
 % cost
 #external cost_aux.
 #external always(and(if(and(executable(walk), or(executable(drive), executable(bus))),
@@ -108,6 +115,14 @@
             executable(take_taxi)), and(or(occurs(drive), occurs(bus)), negation(occurs(take_taxi)))))).
 
 #external and(initially, always(cost_aux)).
+
+
+% weak cost
+#external always(and(or(occurs(walk), negation(or(occurs(drive), occurs(bus)))),
+                         or(or(occurs(drive), occurs(bus)), negation(occurs(take_taxi))))).
+
+#external and(initially, always(cost_weak_aux)).
+
 
 % comfort
 #external comfort_aux.
@@ -117,6 +132,14 @@
 
 #external and(initially, always(comfort_aux)).
 
+
+% weak comfort
+#external always(and(or(occurs(flight), negation(or(occurs(drive), occurs(bus)))),
+                         or(or(occurs(drive), occurs(bus)), negation(occurs(walk))))).
+
+#external and(initially, always(comfort_weak_aux)).
+
+
 % safety
 #external safety_aux.
 #external always(and(if(and(executable(walk), executable(flight)),
@@ -125,6 +148,11 @@
 
 #external and(initially, always(safety_aux)).
 
+% weak safety
+#external always(and(or(occurs(walk), negation(occurs(flight))),
+                         or(occurs(flight), negation(or(occurs(drive), occurs(bus)))))).
+
+#external and(initially, always(safety_weak_aux)).
 
 % time_coffee_aux
 #external always(or(occurs(buy_coffee), and(if(and(executable(take_taxi), or(executable(drive), executable(bus))),
@@ -184,3 +212,23 @@
                     and(or(occurs(stop), occurs(noop)), negation(or(occurs(wait), occurs(do_f)))))).
 
 #show show(short_aux_test).
+
+
+% OWN
+#external always(time_1).
+#external always(time_2).
+#external always(time_3).
+#external always(cost_1).
+#external always(cost_2).
+#external always(cost_3).
+#external always(comfort_1).
+#external always(comfort_2).
+#external always(comfort_3).
+#external always(safety_1).
+#external always(safety_2).
+#external always(safety_3).
+#external eventually(executable(take_taxi)).
+#external eventually(executable(drive)).
+#external eventually(executable(bus)).
+#external eventually(executable(walk)).
+#external eventually(executable(flight)).
