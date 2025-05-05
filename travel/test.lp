@@ -26,7 +26,7 @@ wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 
 % GOAL
 holds(goal_achieved) :- holds(f).
-:- not eventually(holds(goal_achieved)).
+:- finally, not holds(goal_achieved).
 
 % as soon as the goal is achieved, fire stop (once)
 wnext(occurs(stop)) :- holds(goal_achieved), not holds(ended).

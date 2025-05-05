@@ -170,11 +170,12 @@ wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 
 
 % GOAL
-holds(goal_achieved) :- finally, holds(at(school)).
+% holds(goal_achieved) :- finally, holds(at(school)). this doesnt work for shortest trajectory, because sigma will always be the horizon even if goal is achieved earlier
+holds(goal_achieved) :-  holds(at(school)).
 
 % for preferences time_coffee, cost_coffee, time_n_cost, time_and_cost, time_v_cost, time_or_cost:
-%holds(goal_achieved) :- finally, holds(at(school)), holds(has_coffee).
-:- not eventually(holds(goal_achieved)).
+%holds(goal_achieved) :- holds(at(school)), holds(has_coffee).
+:- finally, not holds(goal_achieved).
 
 % as soon as the goal is achieved, fire stop (once)
 wnext(occurs(stop)) :- holds(goal_achieved), not holds(ended).
@@ -207,7 +208,6 @@ eff(noop, ended, true).        % noop causes ended
 #external prev(holds(F)) : prec(A,F,true).
 #external wnext(neg(F)) : prec(A,F,true).
 #external at(X) : location(X).
-#show show(holds(available_taxi(X))) : location(X).
 #external wnext(neg(F)) : prec(A,F,true).
 #external eventually(holds(has_coffee)).
 

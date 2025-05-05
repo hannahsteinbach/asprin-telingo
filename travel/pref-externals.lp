@@ -18,11 +18,11 @@
 %#show show(safety_aux).
 
 % cost and time
-#show show(occurs(drive)).
-#show show(occurs(bus)).
-#show show(occurs(walk)).
-#show show(occurs(take_taxi)).
-#show show(occurs(flight)).
+
+%#show show(occurs(bus)).
+%#show show(occurs(walk)).
+%#show show(occurs(take_taxi)).
+%#show show(occurs(flight)).
 #show show(occurs(stop)).
 #show show(occurs(noop)).
 
@@ -30,7 +30,7 @@
 %#show show(executable(bus)).
 %#show show(executable(walk)).
 %#show show(executable(take_taxi)).
-#show show(executable(flight)).
+%#show show(executable(flight)).
 %#show show(executable(buy_ticket)).
 %#show show(executable(rent_car)).
 %#show show(executable(call_taxi)).
@@ -75,12 +75,12 @@
 #external sigma(4).
 #external sigma(5).
 
-%#show show(sigma(0)).
-%#show show(sigma(1)).
-%#show show(sigma(2)).
-%#show show(sigma(3)).
-%#show show(sigma(4)).
-%#show show(sigma(5)).
+#show show(sigma(0)).
+#show show(sigma(1)).
+#show show(sigma(2)).
+#show show(sigma(3)).
+#show show(sigma(4)).
+#show show(sigma(5)).
 
 
 % bound n
@@ -169,8 +169,8 @@
 
 #external and(initially, always(cost_coffee_aux)).
 
-#show show(time_coffee_aux).
-#show show(cost_coffee_aux).
+%#show show(time_coffee_aux).
+%#show show(cost_coffee_aux).
 
 % time n cost
 #external always(and(or(occurs(buy_coffee), and(if(and(executable(walk), or(executable(drive), executable(bus))),
@@ -181,10 +181,10 @@
             executable(walk)), and(or(occurs(drive), occurs(bus)), negation(occurs(walk)))))))).
 #external and(initially, always(time_n_cost_aux)).
 #external and(time_coffee_aux,cost_coffee_aux).
-#show show(and(time_coffee_aux,cost_coffee_aux)).
-#show show(time_n_cost_aux).
-
-
+%#show show(and(time_coffee_aux,cost_coffee_aux)).
+%#show show(time_n_cost_aux).
+#external and(always(time_coffee_aux),always(cost_coffee_aux)).
+#external or(always(time_coffee_aux),always(cost_coffee_aux)).
 % time v cost
 #external always(or(or(occurs(buy_coffee), and(if(and(executable(walk), or(executable(drive), executable(bus))),
             and(occurs(walk), negation(or(occurs(drive), occurs(bus))))), if(and(or(executable(drive), executable(bus)),
@@ -195,8 +195,8 @@
 
 #external and(initially, always(time_v_cost_aux)).
 #external or(time_coffee_aux,cost_coffee_aux).
-#show show(time_v_cost_aux).
-#show show(or(time_coffee_aux,cost_coffee_aux)).
+%#show show(time_v_cost_aux).
+%#show show(or(time_coffee_aux,cost_coffee_aux)).
 
 % short
 #external always(if(and(or(executable(stop), executable(noop)), or(executable(drive), or(executable(bus), or(executable(walk),
@@ -205,13 +205,13 @@
              negation(or(occurs(drive), or(occurs(bus), or(occurs(walk), or(occurs(take_taxi),
              or(occurs(flight), or(occurs(buy_ticket), or(occurs(rent_car), or(occurs(call_taxi), occurs(buy_coffee))))))))))))).
 
-#show show(short_aux).
+%#show show(short_aux).
 
 % short test
 #external always(if(and(or(executable(stop), executable(noop)), or(executable(wait), executable(do_f))),
                     and(or(occurs(stop), occurs(noop)), negation(or(occurs(wait), occurs(do_f)))))).
-
-#show show(short_aux_test).
+#external and(initially, always(short_aux_test)).
+% #show show(short_aux_test).
 
 
 % OWN

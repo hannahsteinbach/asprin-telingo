@@ -2,7 +2,7 @@
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
 #const maxCost=100.
 
-#optimize(safety_own).
+#optimize(cost_own).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
 #preference(p1,more(cardinality)){
@@ -77,13 +77,13 @@
 #preference(combined, pareto){**p5; **p6}.
 
 
-% add coffee as a goal in travel.lp! (different action theory)
+% add coffee as a goal in travel.lp! (different action theory) -> p. 579
 % (time_coffee) time_coffee = always(occ(buy_coffee) | (take_taxi <e (drive | bus) <e walk)) -> p. 579
 #preference(time_coffee, more(cardinality)){
     and(initially, always(time_coffee_aux))
 }.
 
-% add coffee as a goal in travel.lp! (different action theory)
+% add coffee as a goal in travel.lp! (different action theory) -> p. 579
 % (cost_coffee) cost_coffee = always(occ(buy_coffee) | (walk <e (drive | bus) <e tak_taxi)). -> p. 579
 #preference(cost_coffee, more(cardinality)){
     and(initially, always(cost_coffee_aux))
@@ -110,7 +110,7 @@
 
 % Ψ5 =! time -> p. 580
 #preference(negated_time, neg){
-    **time
+    **time_coffee
     }.
 
 
@@ -122,9 +122,10 @@
     -W :: **t(W) : W = 0..5
     }.
 
-% for unbound n (4.4.2)-> how to compare directly? idk p. 592
+% for unbound n (4.4.2)-> p. 592
+% run with test.lp
 #preference(shortest_action_based,  more(cardinality)) {
-    true(occurs(stop_noop), T) : time(T)
+    and(initially, always(short_aux_test))
 }.
 
 % cheapest trajectory -> p. 593

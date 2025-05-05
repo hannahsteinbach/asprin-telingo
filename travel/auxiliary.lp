@@ -35,7 +35,7 @@ always(occurs(stop_noop)) :- 1{occurs(stop); occurs(noop)}.
 
 % cheapest trajectory
 eventually(cost_overall(C)) :- holds(sCost(C)), finally.
-#show show(cost_overall(C)) : holds(sCost(C)).
+%#show show(cost_overall(C)) : holds(sCost(C)).
 
 % PAPER
 % (time) time = always(taxi <e (drive|bus) <e walk) -> p. 570
@@ -79,7 +79,7 @@ always(safety_weak_aux) :- initially, always(and(or(occurs(walk), negation(occur
 
 % ME (what about not mentioned actions?)
 % time = always(taxi <e (drive|bus) <e walk)
-% if taxi is executable, take taxi, it not executable and drive/bus are executable, take those, if not executable, walk (never fly)
+% if taxi is executable, take taxi, if not executable and drive/bus are executable, take those, if not executable, walk (never fly)
 always(time_1) :- initially, eventually(executable(take_taxi)), eventually(occurs(take_taxi)), not eventually(occurs(drive)),
            not eventually(occurs(bus)), not eventually(occurs(walk)), not eventually(occurs(flight)).
 always(time_2) :- initially, not eventually(occurs(take_taxi)), eventually(occurs(drive)), not eventually(occurs(walk)),
@@ -90,7 +90,7 @@ always(time_3) :- initially, not eventually(occurs(take_taxi)), not eventually(o
                   not eventually(occurs(bus)), eventually(occurs(walk)), not eventually(occurs(flight)).
 
 % cost = always(walk <e (drive ∨ bus) <e taxi)
-% if walk is executable, then walk, it not executable and drive/bus are executable, take those, if not executable, take taxi (never fly)
+% if walk is executable, then walk, if not executable and drive/bus are executable, take those, if not executable, take taxi (never fly)
 always(cost_1) :- initially, eventually(executable(walk)), eventually(occurs(walk)), not eventually(occurs(drive)),
            not eventually(occurs(bus)), not eventually(occurs(take_taxi)), not eventually(occurs(flight)).
 always(cost_2) :- initially, not eventually(occurs(walk)), eventually(occurs(drive)), not eventually(occurs(take_taxi)),
