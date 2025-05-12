@@ -88,12 +88,18 @@ holds(goal_achieved) :- holds(hasBanana), holds(hasChocolate).
 % as soon as the goal is achieved, fire stop (once)
 wnext(occurs(stop)) :- holds(goal_achieved), not holds(ended).
 prec(stop, goal_achieved, true).   % stop executable if goal
+wnext(executable(stop)) :- holds(goal_achieved), not holds(ended).
+
+
 eff(stop, ended,     true).        % stop causes ended
 
 % after ended holds, fire noop every step
 wnext(occurs(noop)) :- holds(ended).
 prec(noop, ended,    true).        % noop executable if ended
-eff(noop, ended,     true).        % noop causes ended
+wnext(executable(noop)) :-  holds(ended).
+
+eff(noop, ended, true).        % noop causes ended
+
 
 
 #external initially.

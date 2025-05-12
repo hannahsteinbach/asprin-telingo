@@ -20,25 +20,6 @@ wnext(neg(sCost(N))) :-
     wnext(holds(sCost(M))), N != M.
 
 
-holds(sTime(0)) :- initially.
-holds(sTime(NC)) :-
-    prev(holds(sTime(N))),
-    occurs(A),
-    time(A, C),
-    num(N), num(C), NC = N + C, num(NC).
-
-% time also proceeds with inaction, but only before goal is achieved.
-holds(sTime(N+1)) :-
-    prev(holds(sTime(N))),
-    not occurs(A),
-    not holds(goal_achieved),
-    time(A, _), num(N).
-
-wnext(neg(sTime(N))) :-
-    holds(sTime(N)),
-    wnext(holds(sTime(M))), N != M.
-
-
 % ACTIONS WITH THEIR EXECUTABILITY CONDITIONS (ACTION PRECONDITION AXIOMS)
 
 % walk(l1, l2) causes at(l2) if at(l1), road(l1, l2)

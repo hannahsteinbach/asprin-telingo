@@ -1,7 +1,6 @@
 % p1
 #external and(initially, eventually(or(occurs(bus(home,school)), occurs(take_taxi(home,school))))).
 
-
 % p2
 #external and(initially, always(negation(occurs(call_taxi(home))))).
 
@@ -10,6 +9,8 @@
 
 % p4
 #external eventually(p4_aux).
+#external and(finally, holds(has_coffee)).
+
 
 % cost, time, comfort, safety
 %show show(cost_aux).

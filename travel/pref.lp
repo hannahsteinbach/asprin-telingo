@@ -2,7 +2,7 @@
 % clingo travel/travel.lp travel/instances.lp travel/auxiliary.lp travel/pref-externals.lp  0 --output=reify | asprin - meta-telingo.lp travel/pref.lp meta-telingo-extension.lp -c horizon=2 0
 #const maxCost=100.
 
-#optimize(cost_own).
+#optimize(time_weak).
 
 % (P1) eventually(occ(bus(home,school)) | occ(taxi(home,school))).-> p. 566.
 #preference(p1,more(cardinality)){
@@ -22,6 +22,11 @@
 % (P4) goal(has_coffee). -> p. 569
 #preference(p4,more(cardinality)){
     eventually(p4_aux)
+}.
+
+% does not work:
+#preference(p4_alt,more(cardinality)){
+    and(finally, holds(has_coffee))
 }.
 
 %(time) time = always(taxi <e (drive|bus) <e walk) -> p. 570
@@ -124,6 +129,7 @@
 
 % for unbound n (4.4.2)-> p. 592
 % run with test.lp
+% short = always((stop v noop) <e (a1 v ... v ak)).
 #preference(shortest_action_based,  more(cardinality)) {
     and(initially, always(short_aux_test))
 }.

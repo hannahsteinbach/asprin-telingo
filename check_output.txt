@@ -2,287 +2,240 @@ asprin version 3.1.1
 Reading from - ...
 Solving...
 Answer: 1
-(occurs(walk(home,school)),3) (occurs(drive(home,airport1)),1) (occurs(drive(airport1,home)),2) (sigma(3),0)
+(occurs(walk(home,coffeeshop)),1) (occurs(walk(coffeeshop,school)),2) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 2
-(occurs(take_taxi(home,school)),2) (occurs(call_taxi(home)),1) (sigma(2),0) (occurs(stop),3)
+(occurs(take_taxi(home,school)),2) (occurs(call_taxi(home)),1) (sigma(2),0)
 OPTIMUM FOUND
 Answer: 3
-(occurs(flight(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(drive(home,coffeeshop)),1) (occurs(drive(coffeeshop,school)),2) (sigma(2),0)
 OPTIMUM FOUND
 Answer: 4
-(occurs(flight(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(bus(coffeeshop,school)),2) (occurs(drive(home,coffeeshop)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 5
-(occurs(flight(home,school)),3) (occurs(buy_ticket(home,school)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
-OPTIMUM FOUND
+(occurs(bus(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),2) (sigma(2),0)
+OPTIMUM FOUND *
 Answer: 6
-(occurs(flight(home,school)),3) (occurs(buy_ticket(school,home)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(walk(home,school)),1) (sigma(1),0) (occurs(stop),2)
+OPTIMUM FOUND
 Answer: 7
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport1,airport2)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(call_taxi(home)),1) (occurs(drive(home,school)),2) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 8
-(occurs(flight(home,school)),3) (occurs(buy_ticket(home,airport1)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(walk(home,school)),2) (occurs(call_taxi(home)),1) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 9
-(occurs(flight(home,school)),3) (occurs(buy_ticket(school,airport1)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(bus(home,school)),2) (occurs(call_taxi(home)),1) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 10
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport2,airport1)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(bus(home,school)),1) (sigma(1),0) (occurs(stop),2)
+OPTIMUM FOUND
 Answer: 11
-(occurs(flight(home,school)),3) (occurs(buy_ticket(home,airport2)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(walk(coffeeshop,school)),2) (occurs(bus(home,coffeeshop)),1) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 12
-(occurs(flight(home,school)),3) (occurs(buy_ticket(school,airport2)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(walk(home,coffeeshop)),1) (occurs(bus(coffeeshop,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 13
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport1,home)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(walk(coffeeshop,school)),2) (occurs(drive(home,coffeeshop)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 14
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport2,home)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(drive(home,school)),1) (sigma(1),0) (occurs(stop),2)
+OPTIMUM FOUND
 Answer: 15
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport1,school)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(walk(home,school)),2) (occurs(buy_ticket(school,home)),1) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 16
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport2,school)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(airport2,airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 17
-(occurs(flight(home,school)),3) (occurs(buy_ticket(school,home)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(airport1,airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 18
-(occurs(flight(home,school)),3) (occurs(buy_ticket(home,airport1)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(school,airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 19
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport2,airport1)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(home,airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 20
-(occurs(flight(home,school)),3) (occurs(buy_ticket(school,airport1)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(home,airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 21
-(occurs(flight(home,school)),3) (occurs(buy_ticket(home,airport2)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(school,airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 22
-(occurs(flight(home,school)),3) (occurs(buy_ticket(school,airport2)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(airport1,home)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 23
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport1,home)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(airport2,home)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 24
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport2,home)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(airport2,school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 25
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport1,school)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(buy_ticket(airport1,school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 26
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport2,school)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(walk(home,school)),2) (occurs(call_taxi(airport1)),1) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 27
-(occurs(flight(home,school)),3) (occurs(buy_ticket(airport1,airport2)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(call_taxi(airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 28
-(occurs(flight(home,school)),3) (occurs(call_taxi(coffeeshop)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND
+(occurs(walk(home,school)),2) (occurs(call_taxi(coffeeshop)),1) (sigma(2),0)
+OPTIMUM FOUND *
 Answer: 29
-(occurs(flight(home,school)),3) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(rent_car(home)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 30
-(occurs(flight(home,school)),3) (occurs(rent_car(coffeeshop)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(rent_car(airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 31
-(occurs(flight(home,school)),3) (occurs(call_taxi(airport2)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(rent_car(airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 32
-(occurs(flight(home,school)),3) (occurs(rent_car(airport2)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(call_taxi(school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 33
-(occurs(flight(home,school)),3) (occurs(call_taxi(airport1)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 34
-(occurs(flight(home,school)),3) (occurs(rent_car(airport1)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(rent_car(school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 35
-(occurs(flight(home,school)),3) (occurs(rent_car(home)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(walk(home,school)),2) (occurs(rent_car(coffeeshop)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 36
-(occurs(flight(home,school)),3) (occurs(rent_car(school)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(rent_car(school)),1) (occurs(drive(home,school)),2) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 37
-(occurs(flight(home,school)),3) (occurs(call_taxi(coffeeshop)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(rent_car(coffeeshop)),1) (occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 38
-(occurs(flight(home,school)),3) (occurs(call_taxi(school)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 39
-(occurs(flight(home,school)),3) (occurs(call_taxi(school)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(rent_car(home)),1) (occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 40
-(occurs(flight(home,school)),3) (occurs(call_taxi(airport1)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(call_taxi(coffeeshop)),1) (occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 41
-(occurs(flight(home,school)),3) (occurs(rent_car(home)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(call_taxi(airport2)),1) (occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 42
-(occurs(flight(home,school)),3) (occurs(rent_car(school)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(call_taxi(airport1)),1) (occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 43
-(occurs(flight(home,school)),3) (occurs(rent_car(coffeeshop)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(call_taxi(school)),1) (occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 44
-(occurs(flight(home,school)),3) (occurs(call_taxi(airport2)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(rent_car(airport1)),1) (occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 45
-(occurs(flight(home,school)),3) (occurs(rent_car(airport1)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(rent_car(airport2)),1) (occurs(drive(home,school)),2) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 46
-(occurs(flight(home,school)),3) (occurs(rent_car(airport2)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(bus(home,school)),2) (occurs(buy_ticket(home,airport2)),1) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 47
-(occurs(flight(home,school)),3) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(buy_ticket(airport1,airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 48
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(home,school)),1) (sigma(3),0)
-OPTIMUM FOUND
+(occurs(bus(home,school)),2) (occurs(buy_ticket(school,airport1)),1) (sigma(2),0)
+OPTIMUM FOUND *
 Answer: 49
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(home,school)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(buy_ticket(home,airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 50
-(occurs(flight(home,school)),2) (occurs(buy_ticket(home,school)),1) (sigma(2),0) (occurs(stop),3)
-OPTIMUM FOUND
+(occurs(bus(home,school)),2) (occurs(buy_ticket(airport2,airport1)),1) (sigma(2),0)
+OPTIMUM FOUND *
 Answer: 51
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(call_taxi(home)),2) (sigma(3),0)
-OPTIMUM FOUND
+(occurs(bus(home,school)),2) (occurs(buy_ticket(school,home)),1) (sigma(2),0)
+OPTIMUM FOUND *
 Answer: 52
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(call_taxi(school)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(buy_ticket(school,airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 53
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(rent_car(airport2)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(buy_ticket(airport1,home)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 54
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(call_taxi(airport2)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(buy_ticket(airport2,home)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 55
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(call_taxi(airport1)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(buy_ticket(airport1,school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 56
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(buy_ticket(airport2,school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 57
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(rent_car(home)),2) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(bus(home,school)),2) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 58
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(rent_car(school)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(rent_car(school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 59
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(rent_car(airport1)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(rent_car(coffeeshop)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 60
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(rent_car(coffeeshop)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(rent_car(home)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 61
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(call_taxi(coffeeshop)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(call_taxi(coffeeshop)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 62
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(rent_car(coffeeshop)),1) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(call_taxi(airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 63
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(call_taxi(airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 64
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(call_taxi(airport2)),1) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(call_taxi(school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 65
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(rent_car(airport2)),1) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(rent_car(airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 66
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(call_taxi(airport1)),1) (sigma(3),0)
+(occurs(bus(home,school)),2) (occurs(rent_car(airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 67
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(rent_car(home)),1) (sigma(3),0)
-OPTIMUM FOUND *
+(occurs(drive(home,school)),2) (occurs(buy_ticket(home,airport2)),1) (sigma(2),0)
+OPTIMUM FOUND
 Answer: 68
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(rent_car(school)),1) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(airport1,airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 69
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(rent_car(airport1)),1) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(school,airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 70
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(call_taxi(school)),1) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(home,airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 71
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(call_taxi(coffeeshop)),1) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(airport2,airport1)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 72
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(school,home)),2) (sigma(3),0)
-OPTIMUM FOUND
+(occurs(drive(home,school)),2) (occurs(buy_ticket(school,home)),1) (sigma(2),0)
+OPTIMUM FOUND *
 Answer: 73
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(airport1,airport2)),1) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(school,airport2)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 74
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(airport2,airport1)),1) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(airport1,home)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 75
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(home,airport1)),1) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(airport2,home)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 76
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(school,airport1)),1) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(airport2,school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 Answer: 77
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(home,airport2)),1) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 78
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(school,airport2)),1) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 79
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(airport1,home)),1) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 80
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(airport2,home)),1) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 81
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(airport1,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 82
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(airport2,school)),1) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 83
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),2) (occurs(buy_ticket(school,home)),1) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 84
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(airport1,airport2)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 85
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(airport2,school)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 86
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(airport1,school)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 87
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(airport2,home)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 88
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(airport1,home)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 89
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(school,airport2)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 90
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(home,airport2)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 91
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(school,airport1)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 92
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(home,airport1)),2) (sigma(3),0)
-OPTIMUM FOUND *
-Answer: 93
-(occurs(take_taxi(home,school)),3) (occurs(call_taxi(home)),1) (occurs(buy_ticket(airport2,airport1)),2) (sigma(3),0)
+(occurs(drive(home,school)),2) (occurs(buy_ticket(airport1,school)),1) (sigma(2),0)
 OPTIMUM FOUND *
 
-Models       : 93
+Models       : 77
   Optimum    : yes
-  Optimal    : 92
-Calls        : 26
-Time         : 6.694s (Solving: 0.13s 1st Model: 0.12s Unsat: 0.00s)
-CPU Time     : 6.359s
+  Optimal    : 77
+Calls        : 49
+Time         : 2.832s (Solving: 0.09s 1st Model: 0.08s Unsat: 0.00s)
+CPU Time     : 2.734s
