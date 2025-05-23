@@ -81,7 +81,7 @@ action(buy_ticket(X,Y)) :- airport(X), airport(Y), X != Y.
 prec(buy_ticket(X, Y), has_money, true) :- action(buy_ticket(X,Y)).
 wnext(executable(buy_ticket)) :- holds(has_money), action(buy_ticket(X,Y)).
 
-    
+% add this
 action(buy_coffee).
 prec(buy_coffee, has_money, true) :- action(buy_coffee).
 prec(buy_coffee, at(coffeeshop), true) :- action(buy_coffee).
@@ -125,29 +125,37 @@ eff(rent_car(X), available_car(X), true) :- action(rent_car(X)).
 % add action buy_coffee (page 567)
 eff(buy_coffee, has_coffee, true) :- action(buy_coffee).
 
-    
+% ADD THIS?
 eff(drive(X,Y), at(Y), true) :- action(drive(X,Y)).
 eff(drive(X,Y), at(X), false) :- action(drive(X,Y)).
 eff(flight(X,Y), has_ticket(X,Y), false) :- action(flight(X,Y)).
 eff(take_taxi(X,Y), available_taxi(X), false) :- action(take_taxi(X,Y)).
 eff(drive(X,Y), available_car(X), false) :- action(drive(X,Y)).
+eff(drive(X,Y), available_car(Y), true) :- action(drive(X,Y)). % add this?
 
 
 % Update by effects
 holds(F) :- occurs(A), eff(A, F, true).
 neg(F) :- occurs(A), eff(A, F, false).
 
+%{occurs(X) : action(X)}1.
 { occurs(A) : action(A), A != stop, A != noop } 1 :- not holds(ended).
 
 % INERTIA
 wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 
+% holds(F) :- occurs(A), condeffect(A, X, F, true), holds(G) : condition(A,X,G,true);
+%                                                 not holds(G) : condition(A,X,G,false).
+
+% neg(F) :- occurs(A), condeffect(A, X, F, false), holds(G) : condition(A,X,G,true);
+%                                                 not holds(G) : condition(A,X,G,false).
+
 
 % GOAL
-holds(goal_achieved) :-  holds(at(school)).
+% holds(goal_achieved) :-  holds(at(school)).
 
 % for preferences time_coffee, cost_coffee, time_n_cost, time_and_cost, time_v_cost, time_or_cost:
-%holds(goal_achieved) :- holds(at(school)), holds(has_coffee).
+holds(goal_achieved) :- holds(at(school)), holds(has_coffee).
 :- finally, not holds(goal_achieved).
 
 % as soon as the goal is achieved, fire stop (once)

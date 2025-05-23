@@ -1,0 +1,1 @@
+not eventually(occurs(eat(spaghetti))).

@@ -1,5 +1,5 @@
 %p1
-p1_aux :- initially, holds(hasIngredients(spaghetti)), always(knowsHowToMake(spaghetti)).
+p1_aux :- initially, holds(hasIngredients(spaghetti)), knowsHowToMake(spaghetti).
 
 %p2
 p2_aux :- initially, holds(hasIngredients(X)), knowsHowToMake(X).
@@ -16,16 +16,18 @@ eventually(occurs(cook)) :- occurs(cook(_)).
 p5_aux :- initially, eventually(occurs(cook(X))).
 
 %p6
-eventually(p6_aux) :- initially, eventually(occurs(orderTakeout(_,_))).
+eventually(occurs(orderTakeout)) :- occurs(orderTakeout(X,Y)).
+p6_aux :- initially, eventually(occurs(orderTakeout)).
 
 
 %p7
-eventually(p7_aux) :- initially, eventually(occurs(orderRestaurant(_,_))).
+eventually(occurs(orderRestaurant)) :- occurs(orderRestaurant(X,Y)).
+p7_aux :- initially, eventually(occurs(orderRestaurant)).
 
 
 %p8
-occurs(driveinSnow) :- holds(isSnowing), occurs(drive(X,Y)).
-always(p8_aux) :- initially, always(negation(occurs(driveinSnow))).
+occurs(drive) :- occurs(drive(X,Y)).
+always(p8_aux) :- initially, always(negation(and(occurs(drive), holds(isSnowing)))).
 
 
 %p9

@@ -5,16 +5,15 @@
 
 % (P1) eventually(hasBanana) > eventually(hasCoconut). -> p. 594
 #preference(hasBanana, more(cardinality)){
-    eventually(banana_aux)}.
+    eventually(holds(hasBanana))}.
 
 #preference(hasChocolate, more(cardinality)){
-    eventually(chocolate_aux)}.
+    eventually(holds(hasChocolate))}.
 
 #preference(p1,lexico){1 ::**hasChocolate; 2::**hasBanana}.
 
 
 % (P2) eventually(hasBanana n eventually(hasChocolate)) n until(not hasChocolate, hasBanana) -> p. 595
-%  -> obtain banana before chocolate
 
 #preference(p2,more(cardinality)){
     and(and(eventually(holds(hasBanana)),

@@ -112,6 +112,8 @@ holds(hasIngredients(crepes)) :- initially.
 :- finally, not holds(at(home)).
 
 % Inertia
+% wnext(holds(F)) :- holds(F), not neg(F).
+% holds(F) :- prev(holds(F)), not neg(F).
 wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 
 
@@ -137,4 +139,4 @@ neg(F) :- occurs(A), condeffect(A, X, F, false), holds(G) : condition(A,X,G,true
 
 % show statements
 #show show(occurs(X)) : action(X).
-%#show show(holds(isSnowing)).
+#show show(holds(isSnowing)).

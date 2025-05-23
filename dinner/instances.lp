@@ -1,3 +1,4 @@
+% p. 1336
 
 % MEALS
 
@@ -49,7 +50,6 @@ dineInRest(italianRest). dineInRest(frenchRest).
 onMenu(spaghetti, italianRest). onMenu(pizza, italianRest).
 onMenu(crepes, frenchRest). onMenu(duck, frenchRest).
 onMenu(pizza, pizzaPlace). onMenu(sweetsourpork, chineseRest).
-
 
 % KNOWLEDGE OF RECIPES
 

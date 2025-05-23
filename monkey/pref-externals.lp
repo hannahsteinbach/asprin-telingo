@@ -17,3 +17,4 @@
 #external and(and(eventually(holds(hasBanana)),
     eventually(holds(hasChocolate))),
     until(negation(holds(hasChocolate)), holds(hasBanana))).
+

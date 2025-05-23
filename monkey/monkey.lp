@@ -19,7 +19,6 @@ prec(push(X,Y), at(monkey,X), true) :- action(push(X,Y)).
 prec(push(X,Y), at(box,X), true) :- action(push(X,Y)).
 prec(push(X,Y), onBox, false) :- action(push(X,Y)).
 
-
 action(climb).
 prec(climb, onBox, false) :- action(climb).
 prec(climb, at(monkey,X), true) :- action(climb), holds(at(box,X)).
@@ -81,7 +80,7 @@ wnext(holds(F)) :- holds(F), not wnext(neg(F)).
 % GOAL
 holds(goal_achieved) :- holds(hasCoconut), holds(hasChocolate).
 holds(goal_achieved) :- holds(hasBanana), holds(hasChocolate).
-
+    
 :- not eventually(holds(goal_achieved)).
 
 
@@ -108,15 +107,9 @@ eff(noop, ended, true).        % noop causes ended
 #external eventually(holds(ended)).
 #external occurs(stop).
 #external finally.
+#external and(holds(hasCoconut), or(holds(hasChocolate), holds(hasBanana))).
 #external prev(holds(F)) : prec(A,F,true).
 #external wnext(neg(F)) : prec(A,F,true).
-%#external at(X) : location(X).
 #external wnext(neg(F)) : prec(A,F,true).
 
-%#show show(holds(goal_achieved)).
 #show show(occurs(X)) : action(X).
-%#show show(holds(at(X, Y))) : entity(X), location(Y).
-%#show show(holds(F)) : eff(A, F, true).
-%#show show(holds(F)) : eff(A, F, false).
-%#show show(holds(at(Y,X))) : entity(Y), location(X).
-%#show show(holds(has_money)).

@@ -76,13 +76,6 @@
 #external sigma(4).
 #external sigma(5).
 
-#show show(sigma(0)).
-#show show(sigma(1)).
-#show show(sigma(2)).
-#show show(sigma(3)).
-#show show(sigma(4)).
-#show show(sigma(5)).
-
 
 % bound n
 #external and(initially, sigma(W)) : sigma(W).
