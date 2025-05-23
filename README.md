@@ -1,4 +1,4 @@
-# Combining `asprin` and `telingo` for Temporal Preferences
+# Combining `asprin` and `telingo` for Temporal Preferences ⌚🫶🏼
 
 This repository showcases how to combine temporal programming in ASP (`telingo`) with qualitative and quantitative optimization using ASP preferences (`asprin`).
 
