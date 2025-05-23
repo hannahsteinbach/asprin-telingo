@@ -1,3 +1,5 @@
+# Combining `asprin` and `telingo` for Temporal Preferences
+
 This repository showcases how to combine temporal programming in ASP (`telingo`) with qualitative and quantitative optimization using ASP preferences (`asprin`).
 
 To illustrate this, we model three classic planning problems — **dinner**, **monkey**, and **travel** — drawing from two foundational papers:
